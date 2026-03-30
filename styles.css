@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.linea {
+  width: 100%;
+  height: 6px;              /* grosor */
+  background-color: #1296d4; /* color */
+  border-radius: 10px;      /* bordes redondeados */
+  margin: 20px 0;           /* espacio arriba y abajo */
+}
+.bordes {
+  margin-top: 15px;
+  background-color: #8F754F;
+  width: 600px;
+  border-radius: 12px;
+  }
+.contenido {
+  width: 600px;
+  margin-top: 15px;
+  text-align: left; background-color: #D7B377; 
+  border-bottom-left-radius: 12px; 
+  border-bottom-right-radius: 12px;
+  height: 500px;
+}
