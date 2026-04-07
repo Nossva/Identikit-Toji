@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toji Fushiguro - Personas que derrotó</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    :root {
+      --beige-claro: #D7B377;
+      --beige-oscuro: #8F754F;
+      --celeste: #1296d4;
+      --azul-oscuro: #2B4162;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--azul-oscuro);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 30px;
+      background: linear-gradient(135deg, var(--beige-oscuro) 0%, var(--beige-claro) 100%);
+      border-bottom: 4px solid var(--celeste);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      color: var(--azul-oscuro);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    p {
+      margin-top: 10px;
+      color: var(--azul-oscuro);
+      font-size: 14px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0;
+    }
+
+    h2 {
+      background-color: var(--beige-oscuro);
+      padding: 20px;
+      margin: 0;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      color: white;
+      font-size: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--beige-claro);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    }
+
+    th, td {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--beige-oscuro);
+      border-right: 2px solid var(--beige-oscuro);
+      color: var(--azul-oscuro);
+      font-weight: 500;
+    }
+
+    td:has(img) {
+      padding: 25px;
+      min-height: 180px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    th:last-child, td:last-child {
+      border-right: none;
+    }
+
+    th {
+      background-color: var(--beige-oscuro);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: var(--beige-claro);
+      transition: all 0.3s ease;
+    }
+
+    tr:hover td {
+      background-color: #E5C9A0;
+      transform: scale(1.02);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: var(--beige-claro);
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .linea {
+      width: 100%;
+      height: 6px;
+      background-color: var(--celeste);
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    td img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      margin: 15px auto 0;
+      margin-bottom: 10px;
+      padding: 12px 26px;
+      background: #2B4162;
+      color: #F5E3B3;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-volver:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.25);
+      background: #35496f;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Toji Fushiguro - Personas que Derrotó</h1>
+    <p>Registro completo de adversarios vencidos por el asesino de hechiceros</p>
+  </header>
+
+  <center>
+    <div class="container">
+      <h2>Lista de Derrotas</h2>
+
+      <table>
+        <tr>
+          <th>Personaje</th>
+          <th>Cuándo lo derrotó</th>
+          <th>Resultado</th>
+          <th>Imagen</th>
+        </tr>
+
+        <tr>
+          <td>Satoru Gojo (joven)</td>
+          <td>Arco Inventario Oculto (Pasado de Gojo)</td>
+          <td>Lo dejó fuera de combate (casi muerto)</td>
+          <td><img class="gif-congelado" src="gif/tojiDerrotaGojo.gif" alt="Gojo"></td>
+        </tr>
+
+        <tr>
+          <td>Suguru Geto (joven)</td>
+          <td>Arco Inventario Oculto (después de Gojo)</td>
+          <td>Derrotado completamente</td>
+          <td><img class="gif-congelado" src="gif/tojiDerrotaGeto.gif" alt="Geto"></td>
+        </tr>
+
+        <tr>
+          <td>Riko Amanai</td>
+          <td>Arco Inventario Oculto (misión de escolta)</td>
+          <td>Asesinada</td>
+          <td><img class="gif-congelado" src="gif/tojiDerrotaRiko.gif" alt="Riko"></td>
+        </tr>
+
+        <tr>
+          <td>Dagon</td>
+          <td>Arco Incidente de Shibuya</td>
+          <td>Eliminado (muerto)</td>
+          <td><img class="gif-congelado" src="gif/tojiDerrotaDragon.gif" alt="Dagon"></td>
+        </tr>
+
+        <tr>
+          <td>Megumi Fushiguro</td>
+          <td>Arco Incidente de Shibuya</td>
+          <td>Derrotado (casi lo mata)</td>
+          <td><img class="gif-congelado" src="gif/tojiDerrotaMegumi.gif" alt="Megumi"></td>
+        </tr>
+
+      </table>
+    </div>
+  </center>
+
+  <div class="linea"></div>
+
+  <center>
+    <a href="index.html" class="btn-volver">← Volver</a>
+  </center>
+
+  <script>
+    // Congelar GIFs hasta que se haga hover
+    const gifsCongelados = document.querySelectorAll('.gif-congelado');
+    
+    gifsCongelados.forEach(img => {
+      const gifSrc = img.src;
+      let isAnimating = false;
+      
+      // Crear una versión congelada usando canvas
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const tempImg = new Image();
+      
+      tempImg.onload = function() {
+        canvas.width = tempImg.width;
+        canvas.height = tempImg.height;
+        ctx.drawImage(tempImg, 0, 0);
+        
+        // Mostrar la primera frame como imagen estática
+        const staticData = canvas.toDataURL('image/png');
+        img.dataset.static = staticData;
+        img.src = staticData;
+      };
+      
+      tempImg.src = gifSrc;
+      
+      // Al pasar el mouse, mostrar el GIF animado
+      img.addEventListener('mouseenter', function() {
+        if (!isAnimating) {
+          this.src = gifSrc;
+          isAnimating = true;
+        }
+      });
+      
+      // Al salir el mouse, volver a mostrar la primera frame congelada
+      img.addEventListener('mouseleave', function() {
+        if (isAnimating && this.dataset.static) {
+          this.src = this.dataset.static;
+          isAnimating = false;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

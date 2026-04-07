@@ -3,24 +3,124 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --beige-claro: #D7B377;
+  --beige-oscuro: #8F754F;
+  --celeste: #1296d4;
+  --azul-oscuro: #2B4162;
+
+}
+
 .linea {
   width: 100%;
-  height: 6px;              /* grosor */
-  background-color: #1296d4; /* color */
-  border-radius: 10px;      /* bordes redondeados */
-  margin: 20px 0;           /* espacio arriba y abajo */
+  height: 6px;
+  /* grosor */
+  background-color: var(--celeste);
+  /* color */
+  border-radius: 10px;
+  /* bordes redondeados */
+  margin: 20px 0;
+  /* espacio arriba y abajo */
 }
+
 .bordes {
   margin-top: 15px;
-  background-color: #8F754F;
-  width: 600px;
+  background-color: var(--beige-oscuro);
   border-radius: 12px;
-  }
-.contenido {
+}
+
+#indexBordes {
   width: 600px;
+}
+
+#moreAboutMeBordes {
+  width: 600px;
+}
+
+.titulo {
+  height: 30px;
+  line-height: 48px;
+}
+
+.contenido {
   margin-top: 15px;
-  text-align: left; background-color: #D7B377; 
-  border-bottom-left-radius: 12px; 
+  text-align: left;
+  background-color: var(--beige-claro);
+  border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+
+}
+
+#moreAboutMeBordesContenido {
+  width: 600px;
   height: 500px;
+}
+
+#indexContenido {
+  width: 600px;
+  height: 800px;
+}
+
+.texto {
+  margin: 25px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.redes a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--beige-claro);
+  border: 2px solid var(--beige-oscuro);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.redes a:hover {
+  transform: translateY(-3px);
+  background-color: var(--azul-oscuro);
+}
+
+.redes img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  filter: invert(24%) sepia(20%) saturate(1017%) hue-rotate(76deg) brightness(92%) contrast(90%);
+}
+
+.enlaces {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.enlaces a {
+  color: var(--beige-oscuro);
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 8px;
+}
+
+.enlaces a:hover {
+  color: var(--rojo);
+  text-decoration: underline;
+}
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.tojiBlockquote {
+  text-align:center;
 }
