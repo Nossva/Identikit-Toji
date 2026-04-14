@@ -102,6 +102,7 @@
   max-width: 860px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .enlaces a {
@@ -124,3 +125,125 @@
 .tojiBlockquote {
   text-align:center;
 }
+
+/* BARRA DE NAVEGACIÓN */
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--azul-oscuro);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 16px 18px;
+  color: var(--beige-claro);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--celeste);
+  color: white;
+}
+
+nav a.activo {
+  background-color: var(--celeste);
+  color: white;
+  border-bottom: 3px solid var(--beige-claro);
+}
+
+/* Separador de elementos en la navbar */
+nav li:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 24px;
+  background-color: var(--beige-oscuro);
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li:not(:last-child)::after {
+    display: none;
+  }
+
+  nav a {
+    padding: 12px 16px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Espaciado principal para compensar navbar fija */
+body {
+  padding-top: 60px;
+}
+
+
+/*CLASEEE*/
+
+
+.contenedor{
+  background-color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+.aside,
+.main{
+  display: inline-block;
+  vertical-align: top;
+  height: 80vh;
+}
+.aside{
+  background-color: yellow;
+  width: 25%;
+}
+.aside li{
+  list-style-type: none;}
+.main{
+  background-color: blue;
+  width: 70%;
+}
+
+
+.footer{
+  padding: 20px;
+  text-align: center;
+}
+
+
+/*CLASEEE*/
