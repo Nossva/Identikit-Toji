@@ -214,8 +214,18 @@ body {
 }
 
 
+/* PERSONAS QUE EH DERROTADO */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0;
+  }
+
 /*CLASEEE*/
 
+
+/*MEDIA*/
 
 .contenedor{
   background-color: green;
