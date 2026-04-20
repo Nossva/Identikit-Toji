@@ -14,9 +14,34 @@
 
 }
 
+/* Imagen de toji inicio*/
+#portada{
+  width: 250px;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imagenFamilia{
+  width: 150px; 
+  float: right; 
+  margin-right: 12px; 
+  margin-top: 12px; 
+  border-radius: 12px;
+}
+
+#imagenZenin{
+  width: 150px; 
+  float: right; 
+  margin-right: 12px; 
+  margin-top: 45px; 
+  border-radius: 12px;
+}
 .colorDeFondo {
   background-color: var(--azul-oscuro);
 }
+
 
 
 .linea {
@@ -35,6 +60,8 @@
   margin-top: 15px;
   background-color: var(--beige-oscuro);
   border-radius: 12px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #indexBordes {
@@ -43,13 +70,12 @@
 
 #moreAboutMeBordes {
   width: 600px;
-  text-align: center;
-  margin: 0 auto;
 }
 
 .titulo {
   height: 30px;
   line-height: 48px;
+  color: white;
 }
 
 .contenido {
@@ -349,6 +375,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding-top: 60px;
+  background-color: #2B4162;
 }
 
 
@@ -416,3 +443,238 @@ body {
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.25);
   background: #35496f;
 }
+
+
+/*TRIVIA*/
+
+
+.body-Trivia {
+    padding-top: 70px;
+}
+
+.victoria-container, .error-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 60px 40px;
+}
+
+.victoria-container {
+    background: linear-gradient(135deg, #1296d4 0%, #8F754F 100%);
+}
+
+.error-container {
+    background: linear-gradient(135deg, #8F754F 0%, #6B5239 100%);
+    border: 3px solid #D7B377;
+}
+
+.trivia-container, .trivia-respuestas-container, .victoria-container, .error-container {
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    border-radius: 12px;
+} 
+
+
+.trivia-container, .trivia-respuestas-container {
+  background-color: #8F754F;
+  padding: 40px;
+}
+
+.trivia-respuestas-container {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.trivia-container {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.trivia-respuestas-container h1 {
+    color: #1296d4;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+        
+.trivia-container h1 {
+    color: #D7B377;
+    font-size: 36px;
+    margin: 0 0 20px 0;
+}
+
+
+.trivia-respuestas-container h2, .trivia-container h2 {
+  color: #F5E3B3;
+  margin: 0 0 30px 0;
+}
+
+.trivia-respuestas-container h2 {
+
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.trivia-container h2 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.trivia-container img {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 3px solid #D7B377;
+}
+
+.btn-jugar {
+    background-color: #1296d4;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid #1296d4;
+}
+
+.btn-jugar:hover {
+    background-color: transparent;
+    color: #1296d4;
+    transform: translateY(-2px);
+}
+
+
+.opciones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.opcion {
+    background-color: #D7B377;
+    border: 3px solid #8F754F;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #2B4162;
+    font-weight: bold;
+}
+
+.opcion:hover {
+    background-color: #E5C9A0;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.progress {
+    color: #D7B377;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.victoria-container h1 {
+    color: #F5E3B3;
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.victoria-container h2 {
+    color: #D7B377;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.victoria-container p {
+    color: #F5E3B3;
+    font-size: 18px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.error-container {
+    background: linear-gradient(135deg, #8F754F 0%, #6B5239 100%);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    border: 3px solid #D7B377;
+}
+
+.error-container h1 {
+    color: #F5E3B3;
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.error-container h2 {
+    color: #D7B377;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+}
+
+.error-container p {
+    color: #F5E3B3;
+    font-size: 18px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.btn-volver-intentar {
+    background-color: #D7B377;
+    color: #2B4162;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid #D7B377;
+    font-size: 16px;
+}
+
+.btn-volver-intentar:hover {
+    background-color: transparent;
+    color: #D7B377;
+    transform: translateY(-2px);
+}
+
+.btn-reintentar {
+    background-color: #1296d4;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid #1296d4;
+    font-size: 16px;
+}
+
+.btn-reintentar:hover {
+    background-color: transparent;
+    color: #1296d4;
+    transform: translateY(-2px);
+}
+
+/*TRIVIA*/
