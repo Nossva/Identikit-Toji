@@ -397,11 +397,14 @@ body {
 .footer{
   text-align: center;
   padding: 25px;
-  color: var(--beige-claro);
   font-size: 13px;
   margin-top: auto;
   background-color: var(--azul-claro);
 }
-
+.footer p {
+  color: var(--beige-claro); 
+  margin: 0;
+  font-family: "Times New Roman", serif;
+}
 
 /*CLASEEE*/
