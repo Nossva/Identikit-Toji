@@ -1,13 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenin Clan</title>
     <link rel="icon" href="img/logos/Toji_Icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .zenin-main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 30px auto;
+        display: flex;
+        gap: 20px;
+      }
+
+      .zenin-sidebar {
+        width: 250px;
+        flex-shrink: 0;
+      }
+
+      .zenin-toc {
+        background-color: var(--beige-claro);
+        border: 2px solid var(--beige-oscuro);
+        border-radius: 8px;
+        padding: 20px;
+        color: var(--azul-oscuro);
+      }
+
+      .zenin-toc h3 {
+        margin-top: 0;
+        color: var(--beige-oscuro);
+        border-bottom: 2px solid var(--celeste);
+        padding-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .zenin-toc ol {
+        margin: 15px 0;
+        padding-left: 20px;
+      }
+
+      .zenin-toc li {
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+
+      .zenin-toc ol ol {
+        margin: 5px 0;
+        padding-left: 20px;
+        font-size: 14px;
+      }
+
+      .zenin-content {
+        flex: 1;
+      }
+
+      .zenin-header-box {
+        background: linear-gradient(135deg, var(--beige-oscuro) 0%, var(--beige-claro) 100%);
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        color: var(--azul-oscuro);
+      }
+
+      .zenin-header-box h1 {
+        margin: 0;
+        font-size: 36px;
+        color: var(--azul-oscuro);
+      }
+
+      .zenin-header-box p {
+        margin: 15px 0 0 0;
+        font-size: 14px;
+      }
+
+      .zenin-article {
+        background-color: var(--beige-claro);
+        padding: 30px;
+        border-radius: 8px;
+        color: var(--azul-oscuro);
+        line-height: 1.8;
+      }
+
+      .zenin-article h2 {
+        color: var(--beige-oscuro);
+        font-size: 24px;
+        border-bottom: 3px solid var(--celeste);
+        padding-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+
+      .zenin-article h2:first-child {
+        margin-top: 0;
+      }
+
+      .zenin-article h3 {
+        color: var(--azul-oscuro);
+        font-size: 18px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+
+      .zenin-article p {
+        margin: 15px 0;
+        text-align: justify;
+      }
+
+      .zenin-article ul, .zenin-article ol {
+        margin: 15px 0;
+        padding-left: 30px;
+      }
+
+      .zenin-article li {
+        margin: 8px 0;
+      }
+
+      .zenin-info-box {
+        background-color: var(--beige-oscuro);
+        border: 2px solid var(--celeste);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        color: white;
+      }
+
+      .zenin-info-box h4 {
+        margin-top: 0;
+        color: var(--beige-claro);
+        border-bottom: 2px solid var(--celeste);
+        padding-bottom: 10px;
+      }
+
+      .zenin-info-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .zenin-info-row:last-child {
+        border-bottom: none;
+      }
+
+      .zenin-info-label {
+        font-weight: bold;
+        color: var(--beige-claro);
+      }
+
+      .zenin-info-value {
+        text-align: right;
+      }
+
+      .linea {
+        margin: 30px auto;
+      }
+
+
+
+      @media (max-width: 900px) {
+        .zenin-main {
+          flex-direction: column;
+        }
+
+        .zenin-sidebar {
+          width: 100%;
+        }
+      }
+    </style>
 </head>
-<body>
+<body class="colorDeFondo">
     <nav>
         <ul>
             <li><a href="./index.html">Inicio</a></li>
@@ -18,9 +181,127 @@
             <li><a href="./trivia/trivia.html">Trivia</a></li>
         </ul>
     </nav>
-    
 
+    <div class="zenin-main">
+      <div class="zenin-sidebar">
+        <div class="zenin-toc">
+          <h3>Contenido</h3>
+          <ol>
+            <li><a href="#info">Información</a></li>
+            <li><a href="#miembros">Miembros Conocidos</a>
+              <ol>
+                <li><a href="#cabezas">Cabezas</a></li>
+                <li><a href="#actuales">Miembros Actuales</a></li>
+                <li><a href="#antiguos">Miembros Antiguos</a></li>
+              </ol>
+            </li>
+            <li><a href="#tecnicas">Técnicas Malditas</a></li>
+            <li><a href="#arcos">Arcos Destacados</a></li>
+            <li><a href="#valores">Valores del Clan</a></li>
+          </ol>
+        </div>
+      </div>
 
+      <div class="zenin-content">
+        <div class="zenin-header-box">
+          <h1>Zenin Clan</h1>
+          <p>禪院一族 (Zen'in Ichizoku) - Uno de los tres grandes clanes de hechiceros en Jujutsu Kaisen</p>
+        </div>
+
+        <div class="zenin-info-box">
+          <h4>Información General</h4>
+          <div class="zenin-info-row">
+            <span class="zenin-info-label">Estado:</span>
+            <span class="zenin-info-value">Activo</span>
+          </div>
+          <div class="zenin-info-row">
+            <span class="zenin-info-label">Afiliación:</span>
+            <span class="zenin-info-value">Tres Grandes Clanes</span>
+          </div>
+          <div class="zenin-info-row">
+            <span class="zenin-info-label">Ocupación:</span>
+            <span class="zenin-info-value">Chamanes de Jujutsu</span>
+          </div>
+          <div class="zenin-info-row">
+            <span class="zenin-info-label">Primera Aparición:</span>
+            <span class="zenin-info-value">Manga Capítulo 18</span>
+          </div>
+        </div>
+
+        <div class="zenin-article">
+          <h2 id="info">Información</h2>
+          <p>
+            El <strong>Clan Zenin</strong> (禪院一族, Zen'in Ichizoku), también conocido como la <strong>Familia Zenin</strong> (禪院家, Zen'in-ke), 
+            es uno de los tres grandes clanes existentes en la serie Jujutsu Kaisen. El clan es conocido por formar parte de los Tres Grandes Clanes 
+            (三大咒術師一族, San Dai Jujutsu Shi Ichizoku), habiendo ganado una posición sólida en la historia del jujutsu con sus grandes logros y su 
+            control absoluto sobre las técnicas malditas más poderosas.
+          </p>
+
+          <p>
+            Cuentan con chamanes de excelentes capacidades e increíbles técnicas malditas. Tienen la costumbre de valorar las técnicas malditas 
+            por encima de todo, y rechazan o discriminan a todo aquel que no pueda controlar energía maldita o no cuente con una técnica propia 
+            puesta que esperan que sus miembros sean "perfectos".
+          </p>
+
+          <h2 id="miembros">Miembros Conocidos</h2>
+          
+          <h3 id="cabezas">Cabezas del Clan</h3>
+          <ul>
+            <li><strong>Ogi Zenin</strong> - Patriarca del clan, líder supremo</li>
+            <li><strong>Naobito Zenin</strong> - Cabeza anterior, miembro prominente</li>
+          </ul>
+
+          <h3 id="actuales">Miembros Actuales (Ordenados por Importancia)</h3>
+          <ol>
+            <li>Ogi Zenin</li>
+            <li>Naobito Zenin</li>
+            <li>Megumi Fushiguro (adoptado)</li>
+            <li>Maki Zenin</li>
+            <li>Mai Zenin</li>
+            <li>Otros miembros de la familia</li>
+          </ol>
+
+          <h3 id="antiguos">Miembros Antiguos</h3>
+          <ul>
+            <li>Toji Fushiguro (desertor)</li>
+            <li>Otros miembros fallecidos en batalla</li>
+          </ul>
+
+          <h2 id="tecnicas">Técnicas Malditas Conocidas</h2>
+          <ul>
+            <li><strong>Técnica de Sombras de Bujutsu</strong> - Especialidad de Megumi Fushiguro</li>
+            <li><strong>Técnica de Proyección</strong> - Control de poder maldito</li>
+            <li><strong>Técnica de Manipulación de Armas Malditas</strong> - Uso de armas especiales</li>
+            <li><strong>Control Avanzado de Energía Cursada</strong> - Dominio superior</li>
+            <li><strong>Técnicas Heredadas por Generación</strong> - Secretos del clan</li>
+          </ul>
+
+          <h2 id="arcos">Arcos Destacados</h2>
+          <ol>
+            <li><strong>Arco Temprano</strong> - Introducción del clan a través de Megumi</li>
+            <li><strong>Arco Incidente de Shibuya</strong> - Participación activa en operaciones</li>
+            <li><strong>Arco de la Colonia Perfecta</strong> - Rol crucial en la trama</li>
+            <li><strong>Arco Final</strong> - Enfrentamientos decisivos para el clan</li>
+          </ol>
+
+          <h2 id="valores">Valores y Filosofía del Clan</h2>
+          <ul>
+            <li>La fuerza y el poder maldito son lo más importante</li>
+            <li>Los débiles carecen de valor para el clan</li>
+            <li>La pureza del poder maldito es esencial</li>
+            <li>El honor y la reputación del clan está por encima de todo</li>
+            <li>Mantener secretos de técnicas es fundamental para la supervivencia</li>
+            <li>La disciplina y el entrenamiento constante son obligatorios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="linea"></div>
+
+    <center>
+      <a href="index.html" class="btn-volver">← Volver</a>
+    </center>
 
     <div class="footer">
         <p> 
