@@ -1,0 +1,179 @@
+/* adoptar.css — estilos de la página de adopción */
+
+/* ===================================
+   FILTROS
+=================================== */
+
+.filtros {
+  padding: 36px 0 20px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-arena);
+}
+
+.filtros__label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 14px;
+}
+
+/* Fila de pills de filtro */
+.filtros__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Pill individual de filtro */
+.filtro-pill {
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--color-arena);
+  background-color: transparent;
+  color: var(--color-marron-oscuro);
+  font-family: var(--font-cuerpo);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.filtro-pill:hover {
+  border-color: var(--color-naranja);
+  color: var(--color-naranja);
+}
+
+/* Pill activo: fondo naranja */
+.filtro-pill.activo {
+  background-color: var(--color-naranja);
+  border-color: var(--color-naranja);
+  color: #fff;
+}
+
+/* ===================================
+   GRID DE PERROS
+=================================== */
+
+.grid-perros {
+  padding: 36px 0 80px;
+  background-color: #fff;
+}
+
+/* Grid de 4 columnas */
+.grid-perros__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ===================================
+   MODAL DE INTERÉS
+=================================== */
+
+/* Opciones de radio para ¿Tenés mascotas? */
+.form-radios {
+  display: flex;
+  gap: 24px;
+  margin-top: 6px;
+}
+
+.form-radios label {
+  font-weight: 400 !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.form-radios input[type="radio"] {
+  width: auto !important;
+  accent-color: var(--color-naranja);
+  cursor: pointer;
+}
+
+/* ===================================
+   PROCESO DE ADOPCIÓN
+=================================== */
+
+.proceso-adopcion {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.proceso-adopcion__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Grid de 3 pasos del proceso */
+.proceso-adopcion__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+/* Bloque verde con requisitos */
+.proceso-requisitos {
+  background-color: var(--color-verde-claro);
+  border-radius: var(--radio);
+  padding: 36px 40px;
+}
+
+.proceso-requisitos h3 {
+  color: var(--color-verde-texto);
+  margin-bottom: 16px;
+}
+
+.proceso-requisitos ul {
+  list-style: disc;
+  padding-left: 22px;
+}
+
+.proceso-requisitos ul li {
+  color: var(--color-marron-oscuro);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* ===================================
+   RESPONSIVE — ADOPTAR
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .grid-perros__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proceso-adopcion__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .filtros {
+    padding: 24px 0 14px;
+  }
+
+  .grid-perros {
+    padding: 24px 0 40px;
+  }
+
+  .grid-perros__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proceso-adopcion {
+    padding: 40px 0;
+  }
+
+  .proceso-adopcion__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proceso-requisitos {
+    padding: 28px 20px;
+  }
+}

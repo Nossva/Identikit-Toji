@@ -1,0 +1,113 @@
+/* card-perro.css — tarjeta de perro en dos variantes */
+
+/* ===================================
+   VARIANTE HOME
+   Tarjeta como enlace clicable
+=================================== */
+
+.perro-card {
+  background-color: #fff;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform var(--transition);
+  cursor: pointer;
+}
+
+.perro-card:hover {
+  transform: scale(1.02);
+}
+
+.perro-card__imagen {
+  background-color: var(--color-arena);
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+}
+
+.perro-card__contenido {
+  padding: 18px;
+}
+
+.perro-card__nombre {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 4px;
+}
+
+.perro-card__info {
+  font-size: 13px;
+  color: var(--color-marron-medio);
+  margin-bottom: 10px;
+}
+
+/* ===================================
+   VARIANTE ADOPTAR
+   Tarjeta con botón "Me interesa"
+=================================== */
+
+.perro-card-adoptar {
+  background-color: #fff;
+  border: 1px solid var(--color-arena);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.perro-card-adoptar:hover {
+  transform: scale(1.02);
+}
+
+.perro-card-adoptar__imagen {
+  background-color: var(--color-arena);
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  flex-shrink: 0;
+}
+
+.perro-card-adoptar__contenido {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.perro-card-adoptar__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.perro-card-adoptar__nombre {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-marron-oscuro);
+}
+
+.perro-card-adoptar__info {
+  font-size: 13px;
+  color: var(--color-marron-medio);
+  margin-bottom: 6px;
+}
+
+.perro-card-adoptar__personalidad {
+  font-size: 14px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.7;
+  font-style: italic;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}

@@ -1,0 +1,201 @@
+/* navbar.css — estilos del componente navbar */
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 14px 0;
+  background-color: rgba(255, 248, 238, 0.95);
+  backdrop-filter: blur(4px);
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--color-marron-medio);
+  flex-shrink: 0;
+}
+
+/* Lista de links de navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: nowrap;
+}
+
+.nav-links a {
+  font-family: var(--font-cuerpo);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-marron-oscuro);
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-naranja);
+}
+
+/* Subrayado naranja para el link de la página actual */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-naranja);
+  border-radius: 2px;
+}
+
+/* Botón CTA del navbar */
+.navbar__cta {
+  background-color: var(--color-naranja) !important;
+  color: #fff !important;
+  padding: 10px 22px !important;
+  border-radius: 100px;
+  font-family: var(--font-titulo) !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  transition: background-color var(--transition) !important;
+}
+
+.navbar__cta:hover {
+  background-color: #d48f15 !important;
+  color: #fff !important;
+}
+
+.navbar__cta::after {
+  display: none !important;
+}
+
+/* Botón Donar standalone: visible solo en mobile, dentro del navbar */
+.navbar__cta-mobile {
+  display: none;
+}
+
+/* Botón hamburguesa: oculto en desktop */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-marron-oscuro);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* ===================================
+   RESPONSIVE — TABLET
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .navbar__cta {
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+  }
+
+}
+
+/* ===================================
+   RESPONSIVE — MOBILE
+=================================== */
+
+@media (max-width: 600px) {
+
+  /* Mostrar hamburguesa */
+  .hamburguesa {
+    display: flex;
+  }
+
+  /* Mostrar botón Donar en el navbar (entre logo y hamburguesa) */
+  .navbar__cta-mobile {
+    display: inline-block !important;
+    font-size: 14px !important;
+    padding: 8px 18px !important;
+  }
+
+  /* Ocultar CTA del menú desplegable: el botón del navbar lo reemplaza */
+  .nav-links .navbar__cta {
+    display: none !important;
+  }
+
+  /* Ocultar links por defecto */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFF8EE;
+    border-top: 1px solid #F7D9A0;
+    padding: 16px 0;
+    z-index: 999;
+  }
+
+  .nav-links.abierto {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 24px;
+    font-size: 16px;
+    border-bottom: 0.5px solid #F7D9A0;
+    display: block;
+    width: 100%;
+    color: #4A3728;
+    text-decoration: none;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* Sin subrayado activo en dropdown */
+  .nav-links a.active::after {
+    display: none;
+  }
+}
+

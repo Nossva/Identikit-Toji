@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voluntarios — PatitasLibres</title>
+  <meta name="description" content="Sumate a nuestra red de voluntarios y ayudá a cambiar la vida de los perros abandonados en Argentina.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../global/global.css">
+  <link rel="stylesheet" href="../../components/navbar/navbar.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="../../components/hero-interno/hero-interno.css">
+  <link rel="stylesheet" href="../../components/form/form.css">
+  <link rel="stylesheet" href="./voluntarios.css">
+</head>
+<body class="voluntarios-page">
+
+
+  <!-- ===========================
+       NAVBAR (global)
+  ============================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index/index.html" class="navbar__logo">🐾 PatitasLibres</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index/index.html">Inicio</a></li>
+        <li><a href="../adoptar/adoptar.html">Adoptá</a></li>
+        <li><a href="../donar/donar.html">Donar</a></li>
+        <li><a href="../voluntarios/voluntarios.html">Voluntarios</a></li>
+        <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+        <li><a href="../donar/donar.html" class="navbar__cta">Donar</a></li>
+      </ul>
+      <a href="../donar/donar.html" class="navbar__cta navbar__cta-mobile">Donar</a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO INTERNO
+  ============================ -->
+  <section class="hero-interno">
+    <div class="container">
+      <h1 class="hero-interno__titulo animate-on-scroll">Sumate a nuestra red de voluntarios</h1>
+      <p class="hero-interno__subtitulo animate-on-scroll">Más de 300 personas ya forman parte de nuestra comunidad. Cada granito suma.</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       TIPOS DE VOLUNTARIADO
+       4 tarjetas con íconos de color
+  ============================ -->
+  <section class="tipos-voluntariado">
+    <div class="container">
+      <h2 class="section-title tipos-voluntariado__titulo animate-on-scroll">¿Cómo podés ayudar?</h2>
+      <p class="tipos-voluntariado__subtitulo animate-on-scroll">Hay un rol para cada persona, sin importar tu disponibilidad o habilidades.</p>
+
+      <div class="tipos-voluntariado__grid">
+
+        <div class="tipo-card animate-on-scroll">
+          <div class="tipo-card__icono tipo-card__icono--naranja">🏠</div>
+          <h3>Hogar de tránsito</h3>
+          <p>Abrís las puertas de tu casa temporariamente para alojar a un perro mientras encuentra su hogar definitivo. Es la forma más impactante de ayudar.</p>
+        </div>
+
+        <div class="tipo-card animate-on-scroll">
+          <div class="tipo-card__icono tipo-card__icono--verde">🦮</div>
+          <h3>Paseador</h3>
+          <p>Ayudás a socializar a los perros del refugio con caminatas regulares. Un perro que pasea bien tiene más chances de ser adoptado.</p>
+        </div>
+
+        <div class="tipo-card animate-on-scroll">
+          <div class="tipo-card__icono tipo-card__icono--arena">📸</div>
+          <h3>Fotógrafo</h3>
+          <p>Tomás fotos y videos de los perros para sus perfiles en redes y la web. Una buena foto puede conseguir un hogar.</p>
+        </div>
+
+        <div class="tipo-card animate-on-scroll">
+          <div class="tipo-card__icono tipo-card__icono--marron">🎪</div>
+          <h3>Apoyo en eventos</h3>
+          <p>Participás en ferias de adopción, jornadas de castración gratuita y otros eventos donde se necesiten manos.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FORMULARIO DE INSCRIPCIÓN
+       JS: global.js > iniciarFormulario()
+  ============================ -->
+  <section class="formulario-voluntario">
+    <div class="container">
+      <div class="formulario-voluntario__inner">
+
+        <h2 class="section-title formulario-voluntario__titulo animate-on-scroll">Inscribite ahora</h2>
+        <p class="formulario-voluntario__subtitulo animate-on-scroll">Completá el formulario y te contactamos en 48 horas.</p>
+
+        <form class="formulario-voluntario__form animate-on-scroll" id="form-voluntario">
+
+          <!-- NOMBRE -->
+          <div class="form-grupo">
+            <label for="campo-nombre">Nombre completo *</label>
+            <input type="text" id="campo-nombre" placeholder="Tu nombre y apellido">
+            <span class="campo-error" id="error-nombre"></span>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-grupo">
+            <label for="campo-email">Email *</label>
+            <input type="email" id="campo-email" placeholder="tu@email.com">
+            <span class="campo-error" id="error-email"></span>
+          </div>
+
+          <!-- TELÉFONO -->
+          <div class="form-grupo">
+            <label for="campo-telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="campo-telefono" placeholder="+54 11 1234-5678">
+            <span class="campo-error" id="error-telefono"></span>
+          </div>
+
+          <!-- CIUDAD -->
+          <div class="form-grupo">
+            <label for="campo-ciudad">Ciudad *</label>
+            <input type="text" id="campo-ciudad" placeholder="Buenos Aires, Rosario, Córdoba...">
+            <span class="campo-error" id="error-ciudad"></span>
+          </div>
+
+          <!-- TIPO DE VOLUNTARIADO (checkboxes) -->
+          <div class="form-grupo">
+            <label>Tipo de voluntariado *</label>
+            <div class="checkboxes-grupo">
+              <label class="checkbox-opcion">
+                <input type="checkbox" name="tipo-voluntariado" value="transito">
+                Hogar de tránsito
+              </label>
+              <label class="checkbox-opcion">
+                <input type="checkbox" name="tipo-voluntariado" value="paseador">
+                Paseador
+              </label>
+              <label class="checkbox-opcion">
+                <input type="checkbox" name="tipo-voluntariado" value="fotografo">
+                Fotógrafo
+              </label>
+              <label class="checkbox-opcion">
+                <input type="checkbox" name="tipo-voluntariado" value="eventos">
+                Apoyo en eventos
+              </label>
+            </div>
+            <span class="campo-error" id="error-tipo"></span>
+          </div>
+
+          <!-- DISPONIBILIDAD -->
+          <div class="form-grupo">
+            <label>Disponibilidad horaria</label>
+            <div class="disponibilidad-grupo">
+              <label class="disponibilidad-opcion">
+                <input type="checkbox" name="disponibilidad" value="manana">
+                Mañana
+              </label>
+              <label class="disponibilidad-opcion">
+                <input type="checkbox" name="disponibilidad" value="tarde">
+                Tarde
+              </label>
+              <label class="disponibilidad-opcion">
+                <input type="checkbox" name="disponibilidad" value="fines-semana">
+                Fines de semana
+              </label>
+            </div>
+          </div>
+
+          <!-- MENSAJE OPCIONAL -->
+          <div class="form-grupo">
+            <label for="campo-mensaje">Contanos algo sobre vos (opcional)</label>
+            <textarea id="campo-mensaje" placeholder="¿Por qué querés ser voluntario? ¿Tenés experiencia con animales? ¿Tenés espacio en casa?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%; font-size:17px; padding:14px">
+            Enviar inscripción
+          </button>
+
+        </form>
+
+        <!-- Mensaje de éxito: oculto por defecto, global.js lo muestra si el form es válido -->
+        <div class="exito-mensaje" id="exito-mensaje">
+          <div class="exito-mensaje__emoji">🐾</div>
+          <h3>¡Muchas gracias por sumarte!</h3>
+          <p>Recibimos tu inscripción. Nos ponemos en contacto en las próximas 48 horas para darte la bienvenida a la familia PatitasLibres.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FOOTER (global)
+  ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__logo-texto">🐾 PatitasLibres</p>
+          <p class="footer__tagline">Cada animal merece una segunda oportunidad.</p>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Navegación</p>
+          <nav class="footer__nav">
+            <a href="../index/index.html">Inicio</a>
+            <a href="../adoptar/adoptar.html">Adoptá</a>
+            <a href="../donar/donar.html">Donar</a>
+            <a href="../voluntarios/voluntarios.html">Voluntarios</a>
+            <a href="../nosotros/nosotros.html">Nosotros</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Contacto y redes</p>
+          <div class="footer__redes">
+            <a href="#">📷 Instagram: @patitaslibres</a>
+            <a href="#">👍 Facebook: /patitaslibres</a>
+            <a href="#">💬 WhatsApp: +54 11 1234-5678</a>
+            <a href="mailto:contacto@patitaslibres.org">✉️ contacto@patitaslibres.org</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__divider">
+      <p class="footer__copyright">2026 PatitasLibres · Hecho con amor 🐾</p>
+    </div>
+  </footer>
+
+  <script src="../../global/global.js"></script>
+  <script src="../../components/navbar/navbar.js"></script>
+  <script src="../../components/footer/footer.js"></script>
+</body>
+</html>

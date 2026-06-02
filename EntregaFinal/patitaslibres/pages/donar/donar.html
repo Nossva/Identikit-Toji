@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donar — PatitasLibres</title>
+  <meta name="description" content="Tu donación ayuda a rescatar y cuidar perros abandonados. Elegí el monto y el modo que más te convenga.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../global/global.css">
+  <link rel="stylesheet" href="../../components/navbar/navbar.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="../../components/hero-interno/hero-interno.css">
+  <link rel="stylesheet" href="./donar.css">
+</head>
+<body class="donar-page">
+
+
+  <!-- ===========================
+       NAVBAR (global)
+  ============================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index/index.html" class="navbar__logo">🐾 PatitasLibres</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index/index.html">Inicio</a></li>
+        <li><a href="../adoptar/adoptar.html">Adoptá</a></li>
+        <li><a href="../donar/donar.html">Donar</a></li>
+        <li><a href="../voluntarios/voluntarios.html">Voluntarios</a></li>
+        <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+        <li><a href="../donar/donar.html" class="navbar__cta">Donar</a></li>
+      </ul>
+      <a href="../donar/donar.html" class="navbar__cta navbar__cta-mobile">Donar</a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO INTERNO
+  ============================ -->
+  <section class="hero-interno">
+    <div class="container">
+      <h1 class="hero-interno__titulo animate-on-scroll">Tu donación hace la diferencia</h1>
+      <p class="hero-interno__subtitulo animate-on-scroll">Cada peso que aportás va directamente al cuidado de los perros. Transparencia total.</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       SELECTOR DE MONTO
+       JS: global.js > iniciarSelectorMonto()
+  ============================ -->
+  <section class="selector-monto">
+    <div class="container">
+      <div class="selector-monto__inner">
+
+        <h2 class="selector-monto__titulo animate-on-scroll">Elegí tu donación</h2>
+        <p class="selector-monto__subtitulo animate-on-scroll">Cualquier monto ayuda a cambiar vidas.</p>
+
+        <!-- Toggle: donación única o mensual -->
+        <div class="toggle-tipo animate-on-scroll">
+          <button class="toggle-btn activo" id="btn-unica">Única</button>
+          <button class="toggle-btn" id="btn-mensual">Mensual</button>
+        </div>
+
+        <!-- Pills de monto fijo -->
+        <div class="monto-pills animate-on-scroll">
+          <button class="monto-pill activo" data-monto="500">$500</button>
+          <button class="monto-pill" data-monto="1000">$1.000</button>
+          <button class="monto-pill" data-monto="2500">$2.500</button>
+          <button class="monto-pill" data-monto="5000">$5.000</button>
+        </div>
+
+        <!-- Input para ingresar un monto personalizado -->
+        <div class="monto-personalizado animate-on-scroll">
+          <label for="input-monto-personalizado">Otro monto (en pesos)</label>
+          <input type="number" id="input-monto-personalizado" placeholder="$ 0" min="1">
+        </div>
+
+        <!-- Caja que muestra el impacto del monto seleccionado -->
+        <div class="monto-impacto animate-on-scroll">
+          <p id="texto-impacto">Cubre la alimentación de un perro durante un mes 🐾</p>
+        </div>
+
+        <!-- Texto extra visible solo cuando se elige donación mensual -->
+        <p class="texto-mensual" id="texto-mensual" style="display:none">
+          Tu donación mensual se procesará automáticamente el mismo día cada mes. Podés cancelar cuando quieras.
+        </p>
+
+        <!-- Botón de donación (visual, sin backend real) -->
+        <div class="selector-monto__boton animate-on-scroll">
+          <button class="btn-primary" style="font-size:18px; padding:16px 48px" onclick="alert('¡Gracias por tu generosidad! En una versión real, aquí se procesaría el pago.')">
+            Donar ahora 🐾
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       TRANSPARENCIA
+  ============================ -->
+  <section class="transparencia">
+    <div class="container">
+      <h2 class="section-title transparencia__titulo animate-on-scroll">¿Adónde va tu dinero?</h2>
+      <p class="transparencia__subtitulo animate-on-scroll">Publicamos informes trimestrales detallados. Nada que ocultar.</p>
+
+      <div class="transparencia__grid">
+
+        <div class="transparencia__card animate-on-scroll">
+          <span class="transparencia__porcentaje">60%</span>
+          <p class="transparencia__descripcion">Alimentación</p>
+          <p class="transparencia__detalle">Alimento balanceado de calidad para todos los perros bajo nuestro cuidado.</p>
+        </div>
+
+        <div class="transparencia__card animate-on-scroll">
+          <span class="transparencia__porcentaje">25%</span>
+          <p class="transparencia__descripcion">Atención veterinaria</p>
+          <p class="transparencia__detalle">Vacunas, castraciones, tratamientos y controles médicos regulares.</p>
+        </div>
+
+        <div class="transparencia__card animate-on-scroll">
+          <span class="transparencia__porcentaje">15%</span>
+          <p class="transparencia__descripcion">Operaciones</p>
+          <p class="transparencia__detalle">Gastos de infraestructura, comunicación y coordinación de voluntarios.</p>
+        </div>
+
+      </div>
+
+      <p class="transparencia__nota animate-on-scroll">
+        Publicamos informes de gastos trimestrales. Escribinos a <strong>contacto@patitaslibres.org</strong> para solicitarlos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       OTRAS FORMAS DE AYUDAR
+  ============================ -->
+  <section class="otras-formas">
+    <div class="container">
+      <h2 class="section-title otras-formas__titulo animate-on-scroll">Otras formas de contribuir</h2>
+
+      <div class="otras-formas__grid">
+
+        <div class="forma-card animate-on-scroll">
+          <div class="forma-card__icono">🏦</div>
+          <h3>Transferencia bancaria</h3>
+          <p>Si preferís transferir directamente, podés hacerlo a nuestra cuenta:</p>
+          <p class="forma-card__dato">Alias: patitas.libres.ong</p>
+          <p class="forma-card__dato">CBU: 0000111122223333444455</p>
+          <p class="forma-card__dato">CUIT: 30-12345678-9</p>
+        </div>
+
+        <div class="forma-card animate-on-scroll">
+          <div class="forma-card__icono">💳</div>
+          <h3>Mercado Pago</h3>
+          <p>Escaneá el QR de nuestro perfil o buscanos directamente en la app:</p>
+          <p class="forma-card__dato">@patitaslibres</p>
+          <p style="font-size:13px; color:var(--color-marron-oscuro); opacity:0.6; margin-top:8px">Aceptamos todas las tarjetas de crédito y débito.</p>
+        </div>
+
+        <div class="forma-card animate-on-scroll">
+          <div class="forma-card__icono">📦</div>
+          <h3>Donar insumos</h3>
+          <p>También recibimos donaciones de alimento, medicamentos, mantas y juguetes.</p>
+          <p class="forma-card__dato">WhatsApp: +54 11 1234-5678</p>
+          <p style="font-size:13px; color:var(--color-marron-oscuro); opacity:0.6; margin-top:8px">Coordinamos el retiro o te damos la dirección de entrega.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FOOTER (global)
+  ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__logo-texto">🐾 PatitasLibres</p>
+          <p class="footer__tagline">Cada animal merece una segunda oportunidad.</p>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Navegación</p>
+          <nav class="footer__nav">
+            <a href="../index/index.html">Inicio</a>
+            <a href="../adoptar/adoptar.html">Adoptá</a>
+            <a href="../donar/donar.html">Donar</a>
+            <a href="../voluntarios/voluntarios.html">Voluntarios</a>
+            <a href="../nosotros/nosotros.html">Nosotros</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Contacto y redes</p>
+          <div class="footer__redes">
+            <a href="#">📷 Instagram: @patitaslibres</a>
+            <a href="#">👍 Facebook: /patitaslibres</a>
+            <a href="#">💬 WhatsApp: +54 11 1234-5678</a>
+            <a href="mailto:contacto@patitaslibres.org">✉️ contacto@patitaslibres.org</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__divider">
+      <p class="footer__copyright">2026 PatitasLibres · Hecho con amor 🐾</p>
+    </div>
+  </footer>
+
+  <script src="../../global/global.js"></script>
+  <script src="../../components/navbar/navbar.js"></script>
+  <script src="../../components/footer/footer.js"></script>
+</body>
+</html>

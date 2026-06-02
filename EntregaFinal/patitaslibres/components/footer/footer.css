@@ -1,0 +1,126 @@
+/* footer.css — estilos del componente footer */
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer {
+  background-color: var(--color-marron-oscuro);
+  color: var(--color-arena);
+  padding: 60px 0 30px;
+}
+
+/* Grid de 3 columnas: logo / nav / redes */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer__logo-texto {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--color-naranja);
+  margin-bottom: 10px;
+}
+
+.footer__tagline {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.7;
+}
+
+.footer__titulo-columna {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-naranja);
+  margin-bottom: 16px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__nav a {
+  font-size: 14px;
+  color: var(--color-arena);
+  opacity: 0.75;
+  transition: opacity var(--transition);
+}
+
+.footer__nav a:hover {
+  opacity: 1;
+}
+
+.footer__redes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__redes a {
+  font-size: 14px;
+  color: var(--color-arena);
+  opacity: 0.75;
+  transition: opacity var(--transition);
+}
+
+.footer__redes a:hover {
+  opacity: 1;
+}
+
+.footer__divider {
+  border: none;
+  border-top: 1px solid rgba(247, 217, 160, 0.2);
+  margin-bottom: 24px;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.55;
+}
+
+/* ===================================
+   RESPONSIVE — FOOTER
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__logo-texto {
+    font-size: 20px;
+  }
+
+  .footer__nav a,
+  .footer__redes a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer__nav,
+  .footer__redes {
+    align-items: center;
+  }
+
+  .footer__redes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

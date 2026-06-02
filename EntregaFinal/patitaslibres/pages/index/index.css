@@ -1,0 +1,333 @@
+/* home.css — estilos de la página de inicio */
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero {
+  background-color: var(--color-crema);
+  padding: 70px 0 80px;
+}
+
+/* Dos columnas: texto izquierda, imagen derecha */
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero__subtitulo {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-naranja);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+.hero__titulo {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 20px;
+  font-size: 44px;
+}
+
+.hero__descripcion {
+  color: var(--color-marron-oscuro);
+  opacity: 0.75;
+  font-size: 17px;
+  margin-bottom: 36px;
+}
+
+.hero__botones {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Placeholder de imagen: cuadrado con color y emoji */
+.hero__imagen-placeholder {
+  background-color: var(--color-arena);
+  border-radius: 20px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--color-marron-medio);
+  font-family: var(--font-titulo);
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ===================================
+   IMPACTO EN NÚMEROS
+=================================== */
+
+.impacto {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.impacto__titulo {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.impacto__subtitulo {
+  text-align: center;
+  color: var(--color-marron-medio);
+  margin-bottom: 52px;
+}
+
+/* Grid de 3 cards */
+.impacto__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.impacto__card {
+  text-align: center;
+  padding: 48px 24px;
+  border-radius: var(--radio);
+  background-color: var(--color-crema);
+  box-shadow: var(--sombra);
+}
+
+/* Número grande en naranja */
+.impacto__numero {
+  font-family: var(--font-titulo);
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--color-naranja);
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.impacto__label {
+  color: var(--color-marron-oscuro);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* ===================================
+   PERROS DESTACADOS
+=================================== */
+
+.perros-destacados {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+/* Header: título a la izquierda, "Ver todos" a la derecha */
+.perros-destacados__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Grid de 4 tarjetas */
+.perros-destacados__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ===================================
+   CÓMO ADOPTAR — 3 PASOS
+=================================== */
+
+.como-adoptar {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.como-adoptar__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Grid de 3 pasos */
+.como-adoptar__pasos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 52px;
+}
+
+.como-adoptar__cta {
+  text-align: center;
+}
+
+/* ===================================
+   BLOQUE DONACIÓN
+=================================== */
+
+.bloque-donacion {
+  padding: 80px 0;
+  background-color: var(--color-verde-claro);
+}
+
+/* Flex: texto a la izquierda, botón a la derecha */
+.bloque-donacion__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.bloque-donacion__texto h2 {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 10px;
+}
+
+.bloque-donacion__texto p {
+  color: var(--color-verde-texto);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+/* ===================================
+   TESTIMONIOS
+=================================== */
+
+.testimonios {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.testimonios__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Grid de 2 testimonios */
+.testimonios__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Tarjeta con borde izquierdo naranja */
+.testimonio-card {
+  padding: 36px;
+  border-left: 4px solid var(--color-naranja);
+  background-color: #fff;
+  border-radius: 0 var(--radio) var(--radio) 0;
+  box-shadow: var(--sombra);
+}
+
+.testimonio-card__quote {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.testimonio-card__autor {
+  font-weight: 600;
+  color: var(--color-naranja);
+  font-size: 14px;
+}
+
+/* ===================================
+   RESPONSIVE — HOME
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .hero__titulo {
+    font-size: 36px;
+  }
+
+  .hero__inner {
+    gap: 36px;
+  }
+
+  .hero__imagen-placeholder {
+    height: 320px;
+  }
+
+  .perros-destacados__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impacto__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .como-adoptar__pasos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonios__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__imagen-placeholder {
+    order: -1;
+    height: 240px;
+  }
+
+  .hero__titulo {
+    font-size: 28px;
+  }
+
+  .impacto {
+    padding: 40px 0;
+  }
+
+  .impacto__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perros-destacados {
+    padding: 40px 0;
+  }
+
+  .perros-destacados__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .como-adoptar {
+    padding: 40px 0;
+  }
+
+  .como-adoptar__pasos {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque-donacion {
+    padding: 40px 0;
+  }
+
+  .bloque-donacion__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonios {
+    padding: 40px 0;
+  }
+
+  .testimonios__grid {
+    grid-template-columns: 1fr;
+  }
+}

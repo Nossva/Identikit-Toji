@@ -1,0 +1,78 @@
+/* paso.css — tarjetas de paso numerado en dos variantes */
+
+/* ===================================
+   VARIANTE HOME (como-adoptar)
+   Fondo crema, sin sombra
+=================================== */
+
+.paso {
+  text-align: center;
+  padding: 36px 24px;
+  border-radius: var(--radio);
+  background-color: var(--color-crema);
+}
+
+.paso__numero {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-naranja);
+  color: #fff;
+  font-family: var(--font-titulo);
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.paso__titulo {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 10px;
+}
+
+.paso__descripcion {
+  color: var(--color-marron-oscuro);
+  opacity: 0.7;
+  font-size: 15px;
+}
+
+/* ===================================
+   VARIANTE ADOPTAR (proceso-adopcion)
+   Fondo blanco con sombra
+=================================== */
+
+.proceso-paso {
+  text-align: center;
+  padding: 36px 22px;
+  background-color: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.proceso-paso__numero {
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-naranja);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titulo);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 auto 16px;
+}
+
+.proceso-paso h3 {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 8px;
+}
+
+.proceso-paso p {
+  font-size: 14px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.72;
+}

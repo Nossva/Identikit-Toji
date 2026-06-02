@@ -1,0 +1,17 @@
+/* hero-interno.css — hero para páginas internas */
+
+.hero-interno {
+  background-color: var(--color-crema);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-interno__titulo {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 14px;
+}
+
+.hero-interno__subtitulo {
+  color: var(--color-marron-medio);
+  font-size: 17px;
+}

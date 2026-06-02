@@ -1,0 +1,47 @@
+/* form.css — grupo de campo de formulario reutilizable */
+
+.form-grupo {
+  margin-bottom: 18px;
+}
+
+.form-grupo label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 6px;
+}
+
+.form-grupo input,
+.form-grupo textarea,
+.form-grupo select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid var(--color-arena);
+  border-radius: 8px;
+  font-family: var(--font-cuerpo);
+  font-size: 15px;
+  color: var(--color-marron-oscuro);
+  background-color: #fff;
+  transition: border-color var(--transition);
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+  outline: none;
+  border-color: var(--color-naranja);
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Mensaje de error debajo de un campo inválido */
+.campo-error {
+  display: block;
+  color: #d64242;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 5px;
+}

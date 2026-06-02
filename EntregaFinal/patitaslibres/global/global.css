@@ -1,0 +1,188 @@
+/* global.css — reset, variables y utilidades globales */
+
+/* ===================================
+   VARIABLES CSS
+   Toda la paleta de colores y fuentes
+   disponible como variables globales
+=================================== */
+:root {
+  --color-naranja:      #F5A623;
+  --color-arena:        #F7D9A0;
+  --color-crema:        #FFF8EE;
+  --color-marron-oscuro:#4A3728;
+  --color-marron-medio: #633806;
+  --color-verde-claro:  #EAF3DE;
+  --color-verde-texto:  #3B6D11;
+
+  --font-titulo: 'Nunito', sans-serif;
+  --font-cuerpo: 'Inter', sans-serif;
+
+  --radio:      12px;
+  --sombra:     0 4px 20px rgba(0, 0, 0, 0.08);
+  --transition: 0.3s ease;
+}
+
+/* ===================================
+   RESET BÁSICO
+=================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-cuerpo);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-marron-oscuro);
+  background-color: #fff;
+  min-width: 350px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===================================
+   TIPOGRAFÍA BASE
+=================================== */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 32px; }
+h3 { font-size: 20px; }
+
+/* ===================================
+   CLASES UTILITARIAS
+=================================== */
+
+/* Contenedor centrado con ancho máximo */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Título estándar de sección */
+.section-title {
+  font-family: var(--font-titulo);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 12px;
+}
+
+/* Badge verde "Disponible" en las tarjetas */
+.badge-disponible {
+  display: inline-block;
+  background-color: var(--color-verde-claro);
+  color: var(--color-verde-texto);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* Botón principal: fondo naranja sólido */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-naranja);
+  color: #fff;
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: 2px solid var(--color-naranja);
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #d48f15;
+  border-color: #d48f15;
+  transform: translateY(-2px);
+}
+
+/* Botón outline: borde naranja, fondo transparente */
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-naranja);
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: 2px solid var(--color-naranja);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), transform var(--transition);
+  text-align: center;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-naranja);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   ANIMACIONES DE SCROLL
+   .animate-on-scroll: elemento invisible
+   .visible: elemento aparece (JS le pone esta clase)
+=================================== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================
+   RESPONSIVE — TIPOGRAFÍA
+=================================== */
+
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 26px; }
+}
+
+/* ===================================
+   COMPENSAR NAVBAR FIJO
+   Todas las páginas necesitan este offset
+=================================== */
+.home-page,
+.adoptar-page,
+.donar-page,
+.voluntarios-page,
+.nosotros-page {
+  padding-top: 72px;
+}
+

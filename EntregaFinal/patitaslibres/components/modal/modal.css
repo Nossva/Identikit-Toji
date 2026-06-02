@@ -1,0 +1,74 @@
+/* modal.css — overlay y caja modal reutilizable */
+
+/* Overlay oscuro de fondo */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Caja blanca del modal */
+.modal {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 44px 40px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+/* Botón X para cerrar */
+.modal__cerrar {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--color-marron-oscuro);
+  opacity: 0.6;
+  line-height: 1;
+  transition: opacity var(--transition);
+}
+
+.modal__cerrar:hover {
+  opacity: 1;
+}
+
+.modal__titulo {
+  font-family: var(--font-titulo);
+  font-size: 26px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 6px;
+}
+
+.modal__subtitulo {
+  color: var(--color-marron-medio);
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .modal {
+    width: 80%;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 95%;
+    padding: 32px 20px;
+    margin: auto;
+  }
+}

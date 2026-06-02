@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoptá — PatitasLibres</title>
+  <meta name="description" content="Encontrá a tu compañero ideal entre nuestros perros disponibles para adopción. Todos vacunados, desparasitados y castrados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../global/global.css">
+  <link rel="stylesheet" href="../../components/navbar/navbar.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="../../components/hero-interno/hero-interno.css">
+  <link rel="stylesheet" href="../../components/form/form.css">
+  <link rel="stylesheet" href="../../components/modal/modal.css">
+  <link rel="stylesheet" href="../../components/card-perro/card-perro.css">
+  <link rel="stylesheet" href="../../components/paso/paso.css">
+  <link rel="stylesheet" href="./adoptar.css">
+</head>
+<body class="adoptar-page">
+
+
+  <!-- ===========================
+       NAVBAR (global)
+  ============================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index/index.html" class="navbar__logo">🐾 PatitasLibres</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index/index.html">Inicio</a></li>
+        <li><a href="../adoptar/adoptar.html">Adoptá</a></li>
+        <li><a href="../donar/donar.html">Donar</a></li>
+        <li><a href="../voluntarios/voluntarios.html">Voluntarios</a></li>
+        <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+        <li><a href="../donar/donar.html" class="navbar__cta">Donar</a></li>
+      </ul>
+      <a href="../donar/donar.html" class="navbar__cta navbar__cta-mobile">Donar</a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO INTERNO
+  ============================ -->
+  <section class="hero-interno">
+    <div class="container">
+      <h1 class="hero-interno__titulo animate-on-scroll">Encontrá a tu compañero ideal</h1>
+      <p class="hero-interno__subtitulo animate-on-scroll">Todos nuestros perros están vacunados, desparasitados y castrados. Listos para su nuevo hogar.</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FILTROS
+       Pills para filtrar por tamaño y edad
+       JS: global.js > iniciarFiltros()
+  ============================ -->
+  <section class="filtros">
+    <div class="container">
+      <p class="filtros__label">Filtrar por</p>
+      <div class="filtros__pills">
+        <button class="filtro-pill activo" data-filtro="todos">Todos</button>
+        <button class="filtro-pill" data-filtro="pequeno">Pequeño</button>
+        <button class="filtro-pill" data-filtro="mediano">Mediano</button>
+        <button class="filtro-pill" data-filtro="grande">Grande</button>
+        <button class="filtro-pill" data-filtro="cachorro">Cachorro</button>
+        <button class="filtro-pill" data-filtro="adulto">Adulto</button>
+        <button class="filtro-pill" data-filtro="senior">Senior</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       GRID DE PERROS
+       8 tarjetas con atributos data-* para el filtro
+       Botón "Me interesa" abre el modal
+  ============================ -->
+  <section class="grid-perros">
+    <div class="container">
+      <div class="grid-perros__grid">
+
+        <!-- Lola: mediana, adulta -->
+        <div class="perro-card-adoptar" data-tamanio="mediano" data-edad="adulto">
+          <div class="perro-card-adoptar__imagen">🐕</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Lola</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">2 años · Mediana · Mestiza</p>
+            <p class="perro-card-adoptar__personalidad">"Juguetona y cariñosa"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Lola" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Bruno: grande, adulto -->
+        <div class="perro-card-adoptar" data-tamanio="grande" data-edad="adulto">
+          <div class="perro-card-adoptar__imagen">🦮</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Bruno</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">4 años · Grande · Labrador</p>
+            <p class="perro-card-adoptar__personalidad">"Tranquilo y leal"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Bruno" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Coco: pequeño, adulto -->
+        <div class="perro-card-adoptar" data-tamanio="pequeno" data-edad="adulto">
+          <div class="perro-card-adoptar__imagen">🐩</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Coco</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">1 año · Pequeño · Caniche</p>
+            <p class="perro-card-adoptar__personalidad">"Energético y curioso"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Coco" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Mia: mediana, adulta -->
+        <div class="perro-card-adoptar" data-tamanio="mediano" data-edad="adulto">
+          <div class="perro-card-adoptar__imagen">🐶</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Mia</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">3 años · Mediana · Beagle</p>
+            <p class="perro-card-adoptar__personalidad">"Dulce y sociable"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Mia" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Thor: grande, adulto -->
+        <div class="perro-card-adoptar" data-tamanio="grande" data-edad="adulto">
+          <div class="perro-card-adoptar__imagen">🐕‍🦺</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Thor</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">5 años · Grande · Rottweiler</p>
+            <p class="perro-card-adoptar__personalidad">"Protector y noble"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Thor" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Luna: pequeña, cachorra -->
+        <div class="perro-card-adoptar" data-tamanio="pequeno" data-edad="cachorro">
+          <div class="perro-card-adoptar__imagen">🐾</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Luna</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">6 meses · Pequeña · Mestiza</p>
+            <p class="perro-card-adoptar__personalidad">"Traviesa y afectuosa"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Luna" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Max: mediano, senior -->
+        <div class="perro-card-adoptar" data-tamanio="mediano" data-edad="senior">
+          <div class="perro-card-adoptar__imagen">🦴</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Max</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">7 años · Mediano · Senior</p>
+            <p class="perro-card-adoptar__personalidad">"Tranquilo, ideal para adultos"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Max" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+        <!-- Nina: mediana, adulta -->
+        <div class="perro-card-adoptar" data-tamanio="mediano" data-edad="adulto">
+          <div class="perro-card-adoptar__imagen">🐕</div>
+          <div class="perro-card-adoptar__contenido">
+            <div class="perro-card-adoptar__top">
+              <p class="perro-card-adoptar__nombre">Nina</p>
+              <span class="badge-disponible">Disponible</span>
+            </div>
+            <p class="perro-card-adoptar__info">2 años · Mediana · Dálmata</p>
+            <p class="perro-card-adoptar__personalidad">"Activa y divertida"</p>
+            <button class="btn-primary btn-me-interesa" data-nombre="Nina" style="width:100%">Me interesa</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODAL DE INTERÉS
+       JS: global.js > iniciarModal()
+  ============================ -->
+  <div class="modal-overlay" id="modal-overlay" style="display:none">
+    <div class="modal">
+      <button class="modal__cerrar" id="modal-cerrar" aria-label="Cerrar modal">✕</button>
+      <h2 class="modal__titulo">Me interesa <span id="modal-nombre-perro" style="color:var(--color-naranja)"></span></h2>
+      <p class="modal__subtitulo">Completá tus datos y nos pondremos en contacto a la brevedad.</p>
+
+      <form id="form-interes">
+        <div class="form-grupo">
+          <label for="interes-nombre">Nombre completo</label>
+          <input type="text" id="interes-nombre" placeholder="Tu nombre y apellido">
+        </div>
+        <div class="form-grupo">
+          <label for="interes-email">Email</label>
+          <input type="email" id="interes-email" placeholder="tu@email.com">
+        </div>
+        <div class="form-grupo">
+          <label for="interes-telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="interes-telefono" placeholder="+54 11 1234-5678">
+        </div>
+        <div class="form-grupo">
+          <label>¿Tenés otras mascotas?</label>
+          <div class="form-radios">
+            <label><input type="radio" name="mascotas" value="si"> Sí</label>
+            <label><input type="radio" name="mascotas" value="no" checked> No</label>
+          </div>
+        </div>
+        <div class="form-grupo">
+          <label for="interes-mensaje">Mensaje (opcional)</label>
+          <textarea id="interes-mensaje" placeholder="Contanos sobre vos, tu familia y tu hogar..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%">Enviar consulta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===========================
+       PROCESO DE ADOPCIÓN
+  ============================ -->
+  <section class="proceso-adopcion">
+    <div class="container">
+      <h2 class="section-title proceso-adopcion__titulo animate-on-scroll">Así funciona el proceso</h2>
+
+      <div class="proceso-adopcion__grid">
+
+        <div class="proceso-paso animate-on-scroll">
+          <div class="proceso-paso__numero">1</div>
+          <h3>Elegís tu perro</h3>
+          <p>Buscá entre nuestros perfiles disponibles y clickeá en "Me interesa" cuando encontrés al indicado.</p>
+        </div>
+
+        <div class="proceso-paso animate-on-scroll">
+          <div class="proceso-paso__numero">2</div>
+          <h3>Enviás el formulario</h3>
+          <p>Completás tus datos de contacto para que podamos conocerte y entender tu contexto familiar.</p>
+        </div>
+
+        <div class="proceso-paso animate-on-scroll">
+          <div class="proceso-paso__numero">3</div>
+          <h3>Coordinamos el encuentro</h3>
+          <p>Te contactamos para organizar un primer encuentro y, si todo va bien, coordinamos la adopción.</p>
+        </div>
+
+      </div>
+
+      <div class="proceso-requisitos animate-on-scroll">
+        <h3>Requisitos para adoptar</h3>
+        <ul>
+          <li>Ser mayor de 18 años</li>
+          <li>Contar con vivienda estable donde el perro pueda vivir con libertad y seguridad</li>
+          <li>Comprometerse con la tenencia responsable: veterinario, alimentación adecuada y afecto</li>
+          <li>Completar el formulario de adopción con información verídica</li>
+          <li>Aceptar una visita de seguimiento a los 30 días de la adopción</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       FOOTER (global)
+  ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__logo-texto">🐾 PatitasLibres</p>
+          <p class="footer__tagline">Cada animal merece una segunda oportunidad.</p>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Navegación</p>
+          <nav class="footer__nav">
+            <a href="../index/index.html">Inicio</a>
+            <a href="../adoptar/adoptar.html">Adoptá</a>
+            <a href="../donar/donar.html">Donar</a>
+            <a href="../voluntarios/voluntarios.html">Voluntarios</a>
+            <a href="../nosotros/nosotros.html">Nosotros</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Contacto y redes</p>
+          <div class="footer__redes">
+            <a href="#">📷 Instagram: @patitaslibres</a>
+            <a href="#">👍 Facebook: /patitaslibres</a>
+            <a href="#">💬 WhatsApp: +54 11 1234-5678</a>
+            <a href="mailto:contacto@patitaslibres.org">✉️ contacto@patitaslibres.org</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__divider">
+      <p class="footer__copyright">2026 PatitasLibres · Hecho con amor 🐾</p>
+    </div>
+  </footer>
+
+  <script src="../../global/global.js"></script>
+  <script src="../../components/navbar/navbar.js"></script>
+  <script src="../../components/footer/footer.js"></script>
+</body>
+</html>

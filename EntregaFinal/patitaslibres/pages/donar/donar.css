@@ -1,0 +1,324 @@
+/* donar.css — estilos de la página de donación */
+
+/* ===================================
+   SELECTOR DE MONTO
+=================================== */
+
+.selector-monto {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+/* Contenido centrado con ancho máximo */
+.selector-monto__inner {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.selector-monto__titulo {
+  margin-bottom: 8px;
+}
+
+.selector-monto__subtitulo {
+  color: var(--color-marron-medio);
+  margin-bottom: 40px;
+}
+
+/* Toggle Única / Mensual */
+.toggle-tipo {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 36px;
+  background-color: var(--color-crema);
+  border-radius: 100px;
+  padding: 4px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toggle-btn {
+  padding: 10px 28px;
+  border-radius: 100px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-marron-oscuro);
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Toggle activo: fondo marrón oscuro */
+.toggle-btn.activo {
+  background-color: var(--color-marron-oscuro);
+  color: #fff;
+}
+
+/* Fila de pills de monto */
+.monto-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Pill de monto */
+.monto-pill {
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: 2px solid var(--color-arena);
+  background-color: transparent;
+  color: var(--color-marron-oscuro);
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.monto-pill:hover {
+  border-color: var(--color-naranja);
+  color: var(--color-naranja);
+}
+
+/* Pill activo: fondo naranja */
+.monto-pill.activo {
+  background-color: var(--color-naranja);
+  border-color: var(--color-naranja);
+  color: #fff;
+}
+
+/* Input de monto personalizado */
+.monto-personalizado {
+  margin-bottom: 28px;
+}
+
+.monto-personalizado label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 10px;
+}
+
+.monto-personalizado input {
+  width: 180px;
+  padding: 13px 16px;
+  border: 2px solid var(--color-arena);
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-marron-oscuro);
+  transition: border-color var(--transition);
+}
+
+.monto-personalizado input:focus {
+  outline: none;
+  border-color: var(--color-naranja);
+}
+
+/* Caja que muestra el impacto del monto seleccionado */
+.monto-impacto {
+  background-color: var(--color-crema);
+  border-radius: var(--radio);
+  padding: 22px 28px;
+  margin-bottom: 12px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monto-impacto p {
+  font-family: var(--font-titulo);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-marron-oscuro);
+}
+
+/* Texto extra visible al elegir donación mensual */
+.texto-mensual {
+  font-size: 13px;
+  color: var(--color-marron-medio);
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.selector-monto__boton {
+  margin-top: 28px;
+}
+
+/* ===================================
+   TRANSPARENCIA
+=================================== */
+
+.transparencia {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.transparencia__titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.transparencia__subtitulo {
+  text-align: center;
+  color: var(--color-marron-medio);
+  margin-bottom: 52px;
+}
+
+/* Grid de 3 cards */
+.transparencia__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.transparencia__card {
+  background-color: #fff;
+  border-radius: var(--radio);
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+/* Porcentaje grande en naranja */
+.transparencia__porcentaje {
+  font-family: var(--font-titulo);
+  font-size: 52px;
+  font-weight: 600;
+  color: var(--color-naranja);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.transparencia__descripcion {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 6px;
+}
+
+.transparencia__detalle {
+  font-size: 13px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.65;
+}
+
+.transparencia__nota {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-marron-medio);
+  font-style: italic;
+}
+
+/* ===================================
+   OTRAS FORMAS DE AYUDAR
+=================================== */
+
+.otras-formas {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.otras-formas__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Grid de 3 cards */
+.otras-formas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.forma-card {
+  border: 2px solid var(--color-arena);
+  border-radius: var(--radio);
+  padding: 36px 28px;
+  transition: border-color var(--transition);
+}
+
+.forma-card:hover {
+  border-color: var(--color-naranja);
+}
+
+.forma-card__icono {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.forma-card h3 {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 10px;
+}
+
+.forma-card p {
+  font-size: 14px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.72;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.forma-card__dato {
+  font-weight: 600;
+  color: var(--color-marron-medio);
+  font-size: 14px;
+}
+
+/* ===================================
+   RESPONSIVE — DONAR
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .transparencia__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .otras-formas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .selector-monto {
+    padding: 40px 0;
+  }
+
+  .monto-pills {
+    gap: 8px;
+  }
+
+  .monto-pill {
+    font-size: 16px;
+    padding: 12px 22px;
+  }
+
+  .transparencia {
+    padding: 40px 0;
+  }
+
+  .transparencia__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .otras-formas {
+    padding: 40px 0;
+  }
+
+  .otras-formas__grid {
+    grid-template-columns: 1fr;
+  }
+}

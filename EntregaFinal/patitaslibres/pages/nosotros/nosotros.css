@@ -1,0 +1,371 @@
+/* nosotros.css — estilos de la página Nosotros */
+
+/* ===================================
+   HISTORIA
+=================================== */
+
+.historia {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.historia__inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.historia__titulo {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.historia__texto {
+  font-size: 17px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.82;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+/* ===================================
+   TIMELINE
+=================================== */
+
+.timeline {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.timeline__titulo {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.timeline__lista {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Línea vertical detrás de los puntos */
+.timeline__lista::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background-color: var(--color-arena);
+  border-radius: 2px;
+}
+
+/* Ítem individual del timeline */
+.timeline__item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 44px;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Círculo naranja con el año */
+.timeline__punto {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-naranja);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.timeline__titulo-item {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 6px;
+}
+
+.timeline__texto-item {
+  font-size: 15px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.72;
+  line-height: 1.7;
+}
+
+/* ===================================
+   EQUIPO
+=================================== */
+
+.equipo {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.equipo__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Grid de 4 cards de personas */
+.equipo__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.equipo-card {
+  text-align: center;
+  padding: 36px 20px;
+  background-color: var(--color-crema);
+  border-radius: var(--radio);
+  transition: transform var(--transition);
+}
+
+.equipo-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Avatar circular con inicial de la persona */
+.equipo-card__avatar {
+  width: 84px;
+  height: 84px;
+  background-color: var(--color-arena);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-family: var(--font-titulo);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-marron-medio);
+}
+
+.equipo-card__nombre {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 4px;
+}
+
+.equipo-card__rol {
+  font-size: 14px;
+  color: var(--color-naranja);
+  font-weight: 500;
+}
+
+/* ===================================
+   VALORES
+=================================== */
+
+.valores {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.valores__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Grid de 5 cards */
+.valores__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.valor-card {
+  background-color: #fff;
+  border-radius: var(--radio);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+.valor-card__emoji {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.valor-card h3 {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.valor-card p {
+  font-size: 13px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.68;
+  line-height: 1.6;
+}
+
+/* ===================================
+   CONTACTO
+=================================== */
+
+.contacto {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contacto__titulo {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* Dos columnas: datos y mapa */
+.contacto__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Lista de items de contacto */
+.contacto__datos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contacto__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contacto__icono {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contacto__texto strong {
+  display: block;
+  font-weight: 600;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+
+.contacto__texto a,
+.contacto__texto p {
+  color: var(--color-marron-medio);
+  font-size: 15px;
+  transition: color var(--transition);
+}
+
+.contacto__texto a:hover {
+  color: var(--color-naranja);
+  text-decoration: underline;
+}
+
+/* Placeholder del mapa */
+.contacto__mapa {
+  background-color: var(--color-arena);
+  border-radius: var(--radio);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--color-marron-medio);
+}
+
+.contacto__mapa-icono {
+  font-size: 48px;
+}
+
+.contacto__mapa-titulo {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.contacto__mapa-subtitulo {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+/* ===================================
+   RESPONSIVE — NOSOTROS
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .equipo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valores__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contacto__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .historia {
+    padding: 40px 0;
+  }
+
+  .timeline {
+    padding: 40px 0;
+  }
+
+  .timeline__lista::before {
+    left: 23px;
+  }
+
+  .timeline__punto {
+    width: 48px;
+    height: 48px;
+    font-size: 12px;
+  }
+
+  .timeline__item {
+    padding-left: 68px;
+  }
+
+  .equipo {
+    padding: 40px 0;
+  }
+
+  .equipo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valores {
+    padding: 40px 0;
+  }
+
+  .valores__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto {
+    padding: 40px 0;
+  }
+
+  .contacto__grid {
+    grid-template-columns: 1fr;
+  }
+}

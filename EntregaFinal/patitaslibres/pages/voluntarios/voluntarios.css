@@ -1,0 +1,230 @@
+/* voluntarios.css — estilos de la página de voluntarios */
+
+/* ===================================
+   TIPOS DE VOLUNTARIADO
+=================================== */
+
+.tipos-voluntariado {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.tipos-voluntariado__titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tipos-voluntariado__subtitulo {
+  text-align: center;
+  color: var(--color-marron-medio);
+  margin-bottom: 52px;
+}
+
+/* Grid de 4 tarjetas */
+.tipos-voluntariado__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.tipo-card {
+  background-color: var(--color-crema);
+  border-radius: var(--radio);
+  padding: 36px 22px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tipo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+/* Cuadrado de color que hace de ícono */
+.tipo-card__icono {
+  width: 68px;
+  height: 68px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+}
+
+.tipo-card__icono--naranja  { background-color: var(--color-naranja); }
+.tipo-card__icono--verde    { background-color: var(--color-verde-claro); }
+.tipo-card__icono--arena    { background-color: var(--color-arena); }
+.tipo-card__icono--marron   { background-color: #c9a87c; }
+
+.tipo-card h3 {
+  color: var(--color-marron-oscuro);
+  margin-bottom: 10px;
+}
+
+.tipo-card p {
+  font-size: 14px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.72;
+  line-height: 1.7;
+}
+
+/* ===================================
+   FORMULARIO DE INSCRIPCIÓN
+=================================== */
+
+.formulario-voluntario {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.formulario-voluntario__inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.formulario-voluntario__titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.formulario-voluntario__subtitulo {
+  text-align: center;
+  color: var(--color-marron-medio);
+  margin-bottom: 44px;
+}
+
+/* Caja blanca del formulario */
+.formulario-voluntario__form {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 44px 48px;
+  box-shadow: var(--sombra);
+}
+
+/* Sobrescribir valores del form-grupo global */
+.form-grupo {
+  margin-bottom: 22px;
+}
+
+.form-grupo label {
+  margin-bottom: 8px;
+}
+
+.form-grupo input,
+.form-grupo textarea,
+.form-grupo select {
+  padding: 12px 14px;
+}
+
+.form-grupo textarea {
+  min-height: 110px;
+}
+
+/* Checkboxes de tipos de voluntariado */
+.checkboxes-grupo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkbox-opcion {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--color-marron-oscuro);
+  font-weight: 400;
+}
+
+.checkbox-opcion input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-naranja);
+  flex-shrink: 0;
+}
+
+/* Checkboxes de disponibilidad horaria */
+.disponibilidad-grupo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.disponibilidad-opcion {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--color-marron-oscuro);
+}
+
+.disponibilidad-opcion input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-naranja);
+}
+
+/* Div de éxito: reemplaza al formulario cuando todo está OK */
+.exito-mensaje {
+  display: none;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: var(--color-verde-claro);
+  border-radius: 20px;
+}
+
+.exito-mensaje__emoji {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.exito-mensaje h3 {
+  color: var(--color-verde-texto);
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.exito-mensaje p {
+  color: var(--color-marron-oscuro);
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* ===================================
+   RESPONSIVE — VOLUNTARIOS
+=================================== */
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .tipos-voluntariado__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tipos-voluntariado {
+    padding: 40px 0;
+  }
+
+  .tipos-voluntariado__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-voluntario {
+    padding: 40px 0;
+  }
+
+  .formulario-voluntario__form {
+    padding: 28px 20px;
+  }
+
+  .checkboxes-grupo {
+    grid-template-columns: 1fr;
+  }
+}
