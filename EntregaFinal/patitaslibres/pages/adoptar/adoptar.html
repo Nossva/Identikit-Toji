@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../../components/modal/modal.css">
   <link rel="stylesheet" href="../../components/card-perro/card-perro.css">
   <link rel="stylesheet" href="../../components/paso/paso.css">
+  <link rel="stylesheet" href="../../components/carrusel/carrusel.css">
   <link rel="stylesheet" href="./adoptar.css">
 </head>
 <body class="adoptar-page">
@@ -53,6 +54,25 @@
       <h1 class="hero-interno__titulo animate-on-scroll">Encontrá a tu compañero ideal</h1>
       <p class="hero-interno__subtitulo animate-on-scroll">Todos nuestros perros están vacunados, desparasitados y castrados. Listos para su nuevo hogar.</p>
     </div>
+  </section>
+
+  <!-- ===========================
+       CARRUSEL DE FOTOS
+  ============================ -->
+  <section class="carrusel">
+    <div class="carrusel__track-wrapper">
+      <button class="carrusel__btn carrusel__btn--prev" id="carrusel-prev" aria-label="Anterior">&#8249;</button>
+      <div class="carrusel__viewport">
+        <div class="carrusel__track" id="carrusel-track">
+          <div class="carrusel__slide"><img src="img/perroUno.avif" alt="Perro en adopción"></div>
+          <div class="carrusel__slide"><img src="img/perroDos.avif" alt="Perro en adopción"></div>
+          <div class="carrusel__slide"><img src="img/perroTres.avif" alt="Perro en adopción"></div>
+          <div class="carrusel__slide"><img src="img/perroCuatro.avif" alt="Perro en adopción"></div>
+        </div>
+      </div>
+      <button class="carrusel__btn carrusel__btn--next" id="carrusel-next" aria-label="Siguiente">&#8250;</button>
+    </div>
+    <div class="carrusel__dots" id="carrusel-dots"></div>
   </section>
 
   <!-- ===========================
@@ -320,5 +340,6 @@
   <script src="../../global/global.js"></script>
   <script src="../../components/navbar/navbar.js"></script>
   <script src="../../components/footer/footer.js"></script>
+  <script src="../../components/carrusel/carrusel.js"></script>
 </body>
 </html>
