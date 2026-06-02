@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --beige-claro: #D7B377;
+            --beige-oscuro: #8F754F;
+            --celeste: #1296d4;
+            --azul-oscuro: #2B4162;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--azul-oscuro);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px 80px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 4px solid var(--beige-claro);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: var(--beige-claro);
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .tagline {
+            color: #c9d6e3;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 48px;
+            max-width: 360px;
+            line-height: 1.5;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 480px;
+            margin-bottom: 36px;
+        }
+
+        .section-label {
+            color: var(--beige-oscuro);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 14px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background-color: var(--beige-claro);
+            border: 2px solid var(--beige-oscuro);
+            border-left: 5px solid var(--beige-oscuro);
+            border-radius: 14px;
+            padding: 18px 22px;
+            text-decoration: none;
+            color: var(--azul-oscuro);
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+            background-color: #E5C9A0;
+        }
+
+        .card--blue {
+            background-color: var(--azul-oscuro);
+            border-color: var(--celeste);
+            border-left-color: var(--celeste);
+            color: var(--beige-claro);
+        }
+
+        .card--blue:hover {
+            background-color: #35496f;
+        }
+
+        .card--placeholder {
+            border-left-color: #5a7ab0;
+            opacity: 0.7;
+            cursor: default;
+        }
+
+        .card--placeholder:hover {
+            transform: none;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+            background-color: var(--beige-claro);
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: var(--beige-oscuro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .card--blue .card-icon {
+            background-color: var(--celeste);
+        }
+
+        .card-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .card-title {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .card-sub {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.65;
+            margin-top: 3px;
+        }
+
+        .card-arrow {
+            font-size: 20px;
+            opacity: 0.4;
+            flex-shrink: 0;
+        }
+
+        .divider {
+            width: 100%;
+            max-width: 480px;
+            height: 3px;
+            background: linear-gradient(to right, var(--celeste), var(--beige-oscuro));
+            border-radius: 10px;
+            margin-bottom: 36px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="identikit-Toji/img/Toji/TojiSonriendo.png" alt="Avatar" class="avatar">
+    <h1>Nahuel</h1>
+    <p class="tagline">Mis proyectos de la materia</p>
+
+    <!-- SECCIÓN 1: Identikit -->
+    <div class="section">
+        <p class="section-label">Proyecto 1</p>
+        <a href="identikit-Toji/index.html" class="card card--blue">
+            <span class="card-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+                </svg>
+            </span>
+            <span class="card-body">
+                <span class="card-title">Identikit — Toji Fushiguro</span>
+                <span class="card-sub">Mi sitio de identidad digital</span>
+            </span>
+            <span class="card-arrow">›</span>
+        </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 2: Proyecto tuyo -->
+    <div class="section">
+        <p class="section-label">Proyecto 2</p>
+        <a href="#" class="card card--placeholder">
+            <span class="card-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+            </span>
+            <span class="card-body">
+                <span class="card-title">Título del proyecto</span>
+                <span class="card-sub">Descripción del proyecto</span>
+            </span>
+            <span class="card-arrow">›</span>
+        </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 3: Proyecto tuyo -->
+    <div class="section">
+        <p class="section-label">Proyecto 3</p>
+        <a href="#" class="card card--placeholder">
+            <span class="card-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+            </span>
+            <span class="card-body">
+                <span class="card-title">Título del proyecto</span>
+                <span class="card-sub">Descripción del proyecto</span>
+            </span>
+            <span class="card-arrow">›</span>
+        </a>
+    </div>
+
+</body>
+</html>
