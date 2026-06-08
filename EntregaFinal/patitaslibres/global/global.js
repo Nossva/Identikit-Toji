@@ -231,6 +231,84 @@ function configurarClickMonto(pill, todosPills, textoImpacto) {
 }
 
 /* ========================================
+   DONAR — MODAL DE CONFIRMACIÓN DE DONACIÓN
+   Se abre al hacer click en "Donar ahora",
+   muestra el monto elegido y su impacto, y
+   permite confirmar o cancelar la donación.
+======================================== */
+function obtenerMontoActual() {
+  var inputPersonalizado = document.getElementById('input-monto-personalizado');
+  if (inputPersonalizado && Number(inputPersonalizado.value) > 0) {
+    return Number(inputPersonalizado.value);
+  }
+  var pillActivo = document.querySelector('.monto-pill.activo');
+  if (pillActivo) { return Number(pillActivo.getAttribute('data-monto')); }
+  return 500;
+}
+
+function obtenerTextoImpactoModal(monto) {
+  if (impactos[String(monto)]) { return impactos[String(monto)]; }
+  var perros = Math.max(1, Math.floor(monto / 500));
+  return 'Cubre la alimentación de ' + perros + (perros === 1 ? ' perro' : ' perros') + ' durante un mes 🐾';
+}
+
+function abrirModalDonacion() {
+  var monto        = obtenerMontoActual();
+  var textoImpacto = obtenerTextoImpactoModal(monto);
+  var btnActivo    = document.querySelector('.toggle-btn.activo');
+  var esMensual    = btnActivo && btnActivo.id === 'btn-mensual';
+  var tipoDonacion = esMensual ? 'mensual' : 'única';
+
+  var overlay = document.createElement('div');
+  overlay.id  = 'modal-donacion-overlay';
+
+  overlay.innerHTML =
+    '<div class="modal-donacion" id="modal-donacion-box">' +
+      '<button class="modal-donacion__cerrar" id="modal-donacion-cerrar">×</button>' +
+      '<div class="modal-donacion__icono">🐾</div>' +
+      '<h2 class="modal-donacion__titulo">Confirmá tu donación</h2>' +
+      '<p class="modal-donacion__tipo">Donación ' + tipoDonacion + '</p>' +
+      '<div class="modal-donacion__monto">$' + monto.toLocaleString('es-AR') + '</div>' +
+      '<div class="modal-donacion__impacto"><p>' + textoImpacto + '</p></div>' +
+      '<div class="modal-donacion__acciones">' +
+        '<button class="btn-primary modal-donacion__btn-confirmar" id="modal-btn-confirmar">Confirmar donación</button>' +
+        '<button class="modal-donacion__btn-cancelar" id="modal-btn-cancelar">Cancelar</button>' +
+      '</div>' +
+    '</div>';
+
+  document.body.appendChild(overlay);
+  document.body.style.overflow = 'hidden';
+
+  function cerrarModal() {
+    overlay.remove();
+    document.body.style.overflow = '';
+  }
+
+  overlay.querySelector('#modal-donacion-cerrar').onclick = cerrarModal;
+  overlay.querySelector('#modal-btn-cancelar').onclick    = cerrarModal;
+
+  overlay.onclick = function(e) { if (e.target === overlay) { cerrarModal(); } };
+
+  function onEscape(e) {
+    if (e.key === 'Escape') { cerrarModal(); document.removeEventListener('keydown', onEscape); }
+  }
+  document.addEventListener('keydown', onEscape);
+
+  overlay.querySelector('#modal-btn-confirmar').onclick = function() {
+    var box = document.getElementById('modal-donacion-box');
+    box.innerHTML =
+      '<div class="modal-donacion__gracias">' +
+        '<div class="modal-donacion__icono" style="font-size:56px">🐾</div>' +
+        '<h2 class="modal-donacion__titulo">¡Gracias por tu donación!</h2>' +
+        '<p class="modal-donacion__subtexto">Tu aporte de <strong>$' + monto.toLocaleString('es-AR') + '</strong> ayuda a cambiar vidas.</p>' +
+        '<p class="modal-donacion__subtexto" style="margin-top:8px">' + textoImpacto + '</p>' +
+        '<button class="btn-primary modal-donacion__btn-confirmar" id="modal-btn-volver" style="margin-top:28px">Volver a la página</button>' +
+      '</div>';
+    box.querySelector('#modal-btn-volver').onclick = cerrarModal;
+  };
+}
+
+/* ========================================
    VOLUNTARIOS — FORMULARIO DE INSCRIPCIÓN
    Valida campos obligatorios y muestra
    errores o mensaje de éxito según corresponda

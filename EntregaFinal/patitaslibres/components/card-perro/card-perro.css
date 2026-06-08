@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* card-perro.css — tarjeta de perro en dos variantes */
 
 /* ===================================
@@ -25,6 +31,17 @@
   align-items: center;
   justify-content: center;
   font-size: 56px;
+  overflow: hidden;
+  position: relative;
+}
+
+.perro-card__imagen img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .perro-card__contenido {
