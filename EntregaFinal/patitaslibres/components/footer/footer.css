@@ -29,6 +29,12 @@
   font-weight: 600;
   font-size: 22px;
   color: var(--color-naranja);
+}
+
+.footer__logo-texto img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
   margin-bottom: 10px;
 }
 

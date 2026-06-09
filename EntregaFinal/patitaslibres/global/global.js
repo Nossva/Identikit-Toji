@@ -309,9 +309,80 @@ function abrirModalDonacion() {
 }
 
 /* ========================================
+   CONTACTO — PÁGINA DE CONTACTO Y VOLUNTARIOS
+   Maneja tabs (mensaje / voluntario),
+   validación del form de contacto y
+   del form de inscripción.
+======================================== */
+function iniciarPaginaContacto() {
+  var tabMensaje    = document.getElementById('tab-mensaje');
+  var tabVoluntario = document.getElementById('tab-voluntario');
+  var panelMensaje  = document.getElementById('panel-mensaje');
+  var panelVol      = document.getElementById('panel-voluntario');
+
+  if (!tabMensaje) { return; }
+
+  tabMensaje.onclick = function() {
+    tabMensaje.classList.add('activo');
+    tabVoluntario.classList.remove('activo');
+    panelMensaje.style.display = 'block';
+    panelVol.style.display = 'none';
+  };
+
+  tabVoluntario.onclick = function() {
+    tabVoluntario.classList.add('activo');
+    tabMensaje.classList.remove('activo');
+    panelVol.style.display = 'block';
+    panelMensaje.style.display = 'none';
+  };
+
+  /* ---- Formulario de contacto ---- */
+  var formContacto  = document.getElementById('form-contacto');
+  var exitoContacto = document.getElementById('exito-contacto');
+
+  if (formContacto) {
+    formContacto.onsubmit = function(evento) {
+      evento.preventDefault();
+      limpiarErrores();
+      var hayErrores = false;
+
+      var campoNombre = document.getElementById('campo-nombre-contacto');
+      if (campoNombre && campoNombre.value.trim() === '') {
+        mostrarError('error-nombre-contacto', 'Por favor ingresá tu nombre.');
+        hayErrores = true;
+      }
+
+      var campoEmail = document.getElementById('campo-email-contacto');
+      if (campoEmail && campoEmail.value.trim() === '') {
+        mostrarError('error-email-contacto', 'Por favor ingresá tu email.');
+        hayErrores = true;
+      } else if (campoEmail && campoEmail.value.indexOf('@') === -1) {
+        mostrarError('error-email-contacto', 'El email no parece válido.');
+        hayErrores = true;
+      }
+
+      var campoMsg = document.getElementById('campo-mensaje-contacto');
+      if (campoMsg && campoMsg.value.trim() === '') {
+        mostrarError('error-mensaje-contacto', 'Por favor escribí tu mensaje.');
+        hayErrores = true;
+      }
+
+      if (!hayErrores) {
+        formContacto.style.display = 'none';
+        if (exitoContacto) {
+          exitoContacto.style.display = 'block';
+          exitoContacto.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    };
+  }
+
+  /* ---- Formulario de voluntario ---- */
+  iniciarFormulario();
+}
+
+/* ========================================
    VOLUNTARIOS — FORMULARIO DE INSCRIPCIÓN
-   Valida campos obligatorios y muestra
-   errores o mensaje de éxito según corresponda
 ======================================== */
 function iniciarFormulario() {
   var form         = document.getElementById('form-voluntario');
@@ -398,7 +469,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   if (ruta.indexOf('voluntarios') !== -1) {
-    iniciarFormulario();
+    iniciarPaginaContacto();
   }
 
   if (ruta.indexOf('index') !== -1 || ruta.endsWith('/') || ruta.indexOf('/home/') !== -1) {

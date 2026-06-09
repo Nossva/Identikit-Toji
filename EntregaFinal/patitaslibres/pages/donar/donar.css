@@ -6,6 +6,20 @@
 
 /* donar.css — estilos de la página de donación */
 
+/* Hero con foto de fondo */
+.hero-interno--donar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/perros.png');
+  background-size: cover;
+  background-position: center 35%;
+  background-color: transparent;
+  padding: 140px 0;
+}
+
+.hero-interno--donar .hero-interno__titulo,
+.hero-interno--donar .hero-interno__subtitulo {
+  color: #fff;
+}
+
 /* ===================================
    SELECTOR DE MONTO
 =================================== */

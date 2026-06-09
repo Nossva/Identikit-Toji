@@ -7,8 +7,7 @@
 /* carrusel.css */
 
 .carrusel {
-  padding: 2rem 0 1.5rem;
-  background: var(--color-crema);
+  padding: 0 0 1.5rem;
   overflow: hidden;
 }
 

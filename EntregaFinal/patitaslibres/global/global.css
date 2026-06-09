@@ -44,6 +44,10 @@ body {
   min-width: 350px;
 }
 
+picture {
+  display: block;
+}
+
 img {
   max-width: 100%;
   display: block;

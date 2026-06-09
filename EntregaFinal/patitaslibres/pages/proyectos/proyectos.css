@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* proyectos.css */
+
+/* ===================================
+   PROYECTOS ACTIVOS
+=================================== */
+
+.proyectos-activos {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.proyectos__titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.proyectos__subtitulo {
+  text-align: center;
+  color: var(--color-marron-medio);
+  margin-bottom: 52px;
+}
+
+.proyectos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card de proyecto */
+.proyecto-card {
+  background-color: #fff;
+  border: 2px solid var(--color-arena);
+  border-radius: var(--radio);
+  padding: 32px 28px;
+  transition: border-color var(--transition), transform var(--transition);
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.proyecto-card:hover {
+  border-color: var(--color-naranja);
+  transform: translateY(-3px);
+}
+
+.proyecto-card__icono {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.proyecto-card__estado {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+
+.proyecto-card__estado--activo {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.proyecto-card__estado--nuevo {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.proyecto-card__estado--completado {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.proyecto-card__titulo {
+  font-family: var(--font-titulo);
+  font-size: 19px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 10px;
+}
+
+.proyecto-card__descripcion {
+  font-size: 14px;
+  color: var(--color-marron-oscuro);
+  opacity: 0.72;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Barra de progreso */
+.proyecto-card__progreso {
+  margin-top: auto;
+}
+
+.progreso__barra {
+  background-color: var(--color-arena);
+  border-radius: 100px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progreso__relleno {
+  height: 100%;
+  background-color: var(--color-naranja);
+  border-radius: 100px;
+  transition: width 0.6s ease;
+}
+
+.progreso__relleno--completado {
+  background-color: #4caf50;
+}
+
+.progreso__texto {
+  font-size: 12px;
+  color: var(--color-marron-medio);
+}
+
+/* ===================================
+   CTA DONAR
+=================================== */
+
+.proyectos-cta {
+  padding: 80px 0;
+  background-color: var(--color-crema);
+}
+
+.proyectos-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.proyectos-cta__emoji {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.proyectos-cta__titulo {
+  font-family: var(--font-titulo);
+  font-size: 26px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 12px;
+}
+
+.proyectos-cta__subtitulo {
+  color: var(--color-marron-medio);
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 992px) {
+  .proyectos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .proyectos-activos {
+    padding: 40px 0;
+  }
+
+  .proyectos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proyectos-cta {
+    padding: 40px 0;
+  }
+}

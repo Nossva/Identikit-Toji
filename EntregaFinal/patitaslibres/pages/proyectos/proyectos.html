@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos — PatitasLibres</title>
+  <link rel="icon" href="../index/img/Logo.png">
+  <meta name="description" content="Conocé los proyectos activos de PatitasLibres: castración masiva, refugio, rescate urbano y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../global/global.css">
+  <link rel="stylesheet" href="../../components/navbar/navbar.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="../../components/hero-interno/hero-interno.css">
+  <link rel="stylesheet" href="./proyectos.css">
+</head>
+<body class="proyectos-page">
+
+  <!-- ===========================
+       NAVBAR
+  ============================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index/index.html" class="navbar__logo"><img src="../index/img/Logo.png" alt="PatitasLibres"></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index/index.html">Inicio</a></li>
+        <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+        <li><a href="../proyectos/proyectos.html">Proyectos</a></li>
+        <li><a href="../adoptar/adoptar.html">Adoptá</a></li>
+        <li><a href="../voluntarios/voluntarios.html">Contactanos</a></li>
+        <li><a href="../donar/donar.html" class="navbar__cta">Donar</a></li>
+      </ul>
+      <a href="../donar/donar.html" class="navbar__cta navbar__cta-mobile">Donar</a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO INTERNO
+  ============================ -->
+  <section class="hero-interno">
+    <div class="container">
+      <h1 class="hero-interno__titulo animate-on-scroll">Nuestros proyectos</h1>
+      <p class="hero-interno__subtitulo animate-on-scroll">Iniciativas concretas para mejorar la vida de los perros abandonados en Argentina.</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       PROYECTOS ACTIVOS
+  ============================ -->
+  <section class="proyectos-activos">
+    <div class="container">
+      <h2 class="section-title proyectos__titulo animate-on-scroll">Proyectos en curso</h2>
+      <p class="proyectos__subtitulo animate-on-scroll">Cada proyecto tiene un objetivo claro, un equipo detrás y resultados medibles.</p>
+
+      <div class="proyectos__grid">
+
+        <a href="unidad-movil.html" class="proyecto-card animate-on-scroll">
+          <div class="proyecto-card__icono">🚐</div>
+          <span class="proyecto-card__estado proyecto-card__estado--nuevo">Nuevo</span>
+          <h3 class="proyecto-card__titulo">Unidad móvil de rescate</h3>
+          <p class="proyecto-card__descripcion">Estamos equipando una camioneta para responder rescates de emergencia en toda la Provincia de Buenos Aires.</p>
+          <div class="proyecto-card__progreso">
+            <div class="progreso__barra">
+              <div class="progreso__relleno" style="width: 30%"></div>
+            </div>
+            <p class="progreso__texto">$450.000 recaudados · meta: $1.500.000</p>
+          </div>
+        </a>
+
+        <a href="castracion-masiva.html" class="proyecto-card animate-on-scroll">
+          <div class="proyecto-card__icono">✂️</div>
+          <span class="proyecto-card__estado proyecto-card__estado--activo">En curso</span>
+          <h3 class="proyecto-card__titulo">Castración masiva</h3>
+          <p class="proyecto-card__descripcion">Jornadas gratuitas de castración en barrios vulnerables del AMBA. Reducimos la superpoblación canina de raíz.</p>
+          <div class="proyecto-card__progreso">
+            <div class="progreso__barra">
+              <div class="progreso__relleno" style="width: 72%"></div>
+            </div>
+            <p class="progreso__texto">720 de 1.000 castraciones del año</p>
+          </div>
+        </a>
+
+        <a href="refugio-invierno.html" class="proyecto-card animate-on-scroll">
+          <div class="proyecto-card__icono">🏕️</div>
+          <span class="proyecto-card__estado proyecto-card__estado--completado">Finalizado</span>
+          <h3 class="proyecto-card__titulo">Refugio de invierno</h3>
+          <p class="proyecto-card__descripcion">Construimos y equipamos un refugio temporario para perros callejeros durante los meses de frío extremo en el AMBA.</p>
+          <div class="proyecto-card__progreso">
+            <div class="progreso__barra">
+              <div class="progreso__relleno progreso__relleno--completado" style="width: 100%"></div>
+            </div>
+            <p class="progreso__texto">180 perros alojados durante el invierno 2025</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       CTA DONAR
+  ============================ -->
+  <section class="proyectos-cta">
+    <div class="container">
+      <div class="proyectos-cta__inner animate-on-scroll">
+        <p class="proyectos-cta__emoji">🐾</p>
+        <h2 class="proyectos-cta__titulo">¿Querés que estos proyectos sigan adelante?</h2>
+        <p class="proyectos-cta__subtitulo">Con tu donación financiamos directamente estos programas.</p>
+        <a href="../donar/donar.html" class="btn-primary" style="font-size:17px; padding:14px 40px">Quiero donar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__logo-texto"><img src="../index/img/Logo.png" alt="PatitasLibres"></p>
+          <p class="footer__tagline">Cada animal merece una segunda oportunidad.</p>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Navegación</p>
+          <nav class="footer__nav">
+            <a href="../index/index.html">Inicio</a>
+            <a href="../adoptar/adoptar.html">Adoptá</a>
+            <a href="../donar/donar.html">Donar</a>
+            <a href="../voluntarios/voluntarios.html">Contactanos</a>
+            <a href="../nosotros/nosotros.html">Nosotros</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__titulo-columna">Contacto y redes</p>
+          <div class="footer__redes">
+            <a href="#">📷 Instagram: @patitaslibres</a>
+            <a href="#">👍 Facebook: /patitaslibres</a>
+            <a href="#">💬 WhatsApp: +54 11 1234-5678</a>
+            <a href="mailto:contacto@patitaslibres.org">✉️ contacto@patitaslibres.org</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__divider">
+      <p class="footer__copyright">2026 PatitasLibres · Hecho con amor 🐾</p>
+    </div>
+  </footer>
+
+  <script src="../../global/global.js"></script>
+  <script src="../../components/navbar/navbar.js"></script>
+  <script src="../../components/footer/footer.js"></script>
+</body>
+</html>

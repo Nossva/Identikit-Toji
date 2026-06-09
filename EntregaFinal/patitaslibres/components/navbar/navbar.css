@@ -39,6 +39,13 @@
   font-size: 22px;
   color: var(--color-marron-medio);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  height: 40px;
+  width: auto;
 }
 
 /* Lista de links de navegación */
