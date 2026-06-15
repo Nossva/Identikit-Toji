@@ -144,20 +144,14 @@
   transform: translateY(-4px);
 }
 
-/* Avatar circular con inicial de la persona */
+/* Avatar circular con foto de la persona */
 .equipo-card__avatar {
   width: 84px;
   height: 84px;
-  background-color: var(--color-arena);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  display: block;
   margin: 0 auto 18px;
-  font-family: var(--font-titulo);
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--color-marron-medio);
 }
 
 .equipo-card__nombre {
