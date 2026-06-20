@@ -142,6 +142,14 @@
 .proyectos-cta__emoji {
   font-size: 48px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.proyectos-cta__emoji img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .proyectos-cta__titulo {

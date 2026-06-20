@@ -109,11 +109,19 @@
   font-size: 15px;
   cursor: pointer;
   transition: background-color var(--transition), color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .form-tab.activo {
   background-color: var(--color-naranja);
   color: #fff;
+}
+
+.tab-icon {
+  height: 20px;
+  width: auto;
 }
 
 /* Caja blanca del formulario */
@@ -239,6 +247,12 @@
 .exito-mensaje__emoji {
   font-size: 64px;
   margin-bottom: 20px;
+}
+
+.exito-icon {
+  height: 64px;
+  width: auto;
+  display: inline-block;
 }
 
 .exito-mensaje h3 {
