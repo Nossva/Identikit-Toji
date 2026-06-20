@@ -41,6 +41,13 @@
 .canal-card__icono {
   font-size: 36px;
   margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.canal-card__icono svg {
+  width: 36px;
+  height: 36px;
 }
 
 .canal-card__titulo {
