@@ -6,18 +6,18 @@
 
 /* nosotros.css — estilos de la página Nosotros */
 
-/* ===================================
-   HERO — FOTO GRUPAL
-=================================== */
+/* Hero con foto de fondo */
+.hero-interno--nosotros {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/Grupal.avif');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  padding: 140px 0;
+}
 
-.hero-interno__foto {
-  width: 100%;
-  max-width: 760px;
-  height: 360px;
-  object-fit: cover;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  margin: 36px auto 0;
+.hero-interno--nosotros .hero-interno__titulo,
+.hero-interno--nosotros .hero-interno__subtitulo {
+  color: #fff;
 }
 
 /* ===================================
@@ -337,9 +337,8 @@
 }
 
 @media (max-width: 600px) {
-  .hero-interno__foto {
-    height: 220px;
-    margin-top: 24px;
+  .hero-interno--nosotros {
+    padding: 100px 0;
   }
 
   .historia {

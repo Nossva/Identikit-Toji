@@ -54,6 +54,13 @@
   margin-bottom: 14px;
 }
 
+.proyecto-card__icono--foto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .proyecto-card__estado {
   display: inline-block;
   font-size: 11px;
