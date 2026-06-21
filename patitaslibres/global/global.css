@@ -33,6 +33,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -42,6 +43,7 @@ body {
   color: var(--color-marron-oscuro);
   background-color: #fff;
   min-width: 350px;
+  overflow-x: hidden;
 }
 
 picture {

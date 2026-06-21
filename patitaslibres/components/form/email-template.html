@@ -1,0 +1,41 @@
+<div style="max-width:520px;margin:0 auto;font-family:'Inter',Arial,sans-serif;background-color:#FFF8EE;border-radius:16px;overflow:hidden;border:1px solid #F7D9A0;">
+
+  <div style="background-color:#F5A623;padding:20px 28px;">
+    <p style="margin:0;font-family:'Nunito',Arial,sans-serif;font-size:18px;font-weight:700;color:#ffffff;">
+      🐾 Confirmación de consulta — PatitasLibres
+    </p>
+  </div>
+
+  <div style="padding:28px;background-color:#ffffff;">
+
+    <p style="margin:0 0 20px;font-size:15px;color:#4A3728;">
+      Hola <strong>{{from_name}}</strong>, recibimos tu consulta. Te responderemos a la brevedad.
+    </p>
+
+    <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
+      <tr>
+        <td style="padding:8px 0;font-size:13px;color:#633806;font-weight:700;width:90px;vertical-align:top;">Nombre</td>
+        <td style="padding:8px 0;font-size:14px;color:#4A3728;">{{from_name}}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;font-size:13px;color:#633806;font-weight:700;vertical-align:top;border-top:1px solid #F7D9A0;">Email</td>
+        <td style="padding:8px 0;font-size:14px;border-top:1px solid #F7D9A0;"><a href="mailto:{{from_email}}" style="color:#F5A623;text-decoration:none;">{{from_email}}</a></td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;font-size:13px;color:#633806;font-weight:700;vertical-align:top;border-top:1px solid #F7D9A0;">Asunto</td>
+        <td style="padding:8px 0;font-size:14px;color:#4A3728;border-top:1px solid #F7D9A0;">{{subject}}</td>
+      </tr>
+    </table>
+
+    <p style="margin:0 0 8px;font-size:13px;color:#633806;font-weight:700;">Mensaje</p>
+    <div style="background-color:#FFF8EE;border:1px solid #F7D9A0;border-radius:12px;padding:14px 16px;font-size:14px;color:#4A3728;line-height:1.6;">
+      {{message}}
+    </div>
+
+    <p style="margin:24px 0 0;font-size:13px;color:#633806;">
+      — El equipo de PatitasLibres 🐾
+    </p>
+
+  </div>
+
+</div>

@@ -221,12 +221,21 @@ function configurarClickMonto(pill, todosPills, textoImpacto) {
     pill.classList.add('activo');
 
     var monto = pill.getAttribute('data-monto');
+    var bloqueInput       = document.getElementById('monto-personalizado');
+    var inputPersonalizado = document.getElementById('input-monto-personalizado');
+
+    if (monto === 'otro') {
+      if (bloqueInput) { bloqueInput.style.display = 'block'; }
+      if (inputPersonalizado) { inputPersonalizado.focus(); }
+      if (textoImpacto) { textoImpacto.textContent = 'Cada peso ayuda a cambiar una vida 🐾'; }
+      return;
+    }
+
+    if (bloqueInput) { bloqueInput.style.display = 'none'; }
+    if (inputPersonalizado) { inputPersonalizado.value = ''; }
     if (textoImpacto && impactos[monto]) {
       textoImpacto.textContent = impactos[monto];
     }
-
-    var inputPersonalizado = document.getElementById('input-monto-personalizado');
-    if (inputPersonalizado) { inputPersonalizado.value = ''; }
   };
 }
 
@@ -242,7 +251,10 @@ function obtenerMontoActual() {
     return Number(inputPersonalizado.value);
   }
   var pillActivo = document.querySelector('.monto-pill.activo');
-  if (pillActivo) { return Number(pillActivo.getAttribute('data-monto')); }
+  if (pillActivo) {
+    var monto = Number(pillActivo.getAttribute('data-monto'));
+    if (monto > 0) { return monto; }
+  }
   return 500;
 }
 
@@ -361,19 +373,40 @@ function iniciarPaginaContacto() {
         hayErrores = true;
       }
 
-      var campoMsg = document.getElementById('campo-mensaje-contacto');
+      var campoAsunto = document.getElementById('campo-asunto-contacto');
+      var campoMsg    = document.getElementById('campo-mensaje-contacto');
       if (campoMsg && campoMsg.value.trim() === '') {
         mostrarError('error-mensaje-contacto', 'Por favor escribí tu mensaje.');
         hayErrores = true;
       }
 
-      if (!hayErrores) {
+      if (hayErrores) { return; }
+
+      var botonEnviar = formContacto.querySelector('button[type="submit"]');
+      var textoOriginalBoton = botonEnviar ? botonEnviar.textContent : '';
+      if (botonEnviar) {
+        botonEnviar.disabled = true;
+        botonEnviar.textContent = 'Enviando...';
+      }
+
+      enviarEmailContacto({
+        nombre:  campoNombre.value.trim(),
+        email:   campoEmail.value.trim(),
+        asunto:  campoAsunto ? campoAsunto.value : '',
+        mensaje: campoMsg.value.trim()
+      }, function() {
         formContacto.style.display = 'none';
         if (exitoContacto) {
           exitoContacto.style.display = 'block';
           exitoContacto.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-      }
+      }, function(mensajeError) {
+        if (botonEnviar) {
+          botonEnviar.disabled = false;
+          botonEnviar.textContent = textoOriginalBoton;
+        }
+        mostrarError('error-mensaje-contacto', mensajeError);
+      });
     };
   }
 
